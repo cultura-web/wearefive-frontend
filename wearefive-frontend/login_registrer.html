@@ -31,7 +31,7 @@
             <!--Formulario de Login y registro-->
             <div class="contenedor__login-register">
                 <!--Login-->
-                <form id="entrarForm" class="formulario__login" method="post">
+                <form id="entrarForm" class="formulario__login" method="post" action="http://localhost:8080/auth/login">
                     <h2>Iniciar Sesión</h2>
                     <input name="username" type="text" placeholder="Usuario">
                     <input name="password" type="password" placeholder="Contraseña">
@@ -40,12 +40,13 @@
                     <a href="indexAdmin.html">admin</a>
                 </form>
                 <!--Register-->
-                <form id="registrerForm" class="formulario__register" method="post">
+                <form id="registrerForm" class="formulario__register" method="post" action="http://localhost:8080/auth/register">
                     <h2>Regístrarse</h2>
                     <input name="username" type="text" placeholder="Nombre de Ususario">
                     <input name="contraseña" type="password" placeholder="Contraseña">
                     <input name="apellido" type="text" placeholder="Apellidos">
                     <input name="nombres" type="text" placeholder="Nombres">
+                    <input name="correo" type="text" placeholder="correo">
                     <input name="direccion" type="text" placeholder="Direccion">
                     <input name="celular" type="text" placeholder="Celular">
                     <button id="registrerbutton" type="submit">Regístrarse</button>
@@ -53,6 +54,29 @@
             </div>
         </div>
     </main>
+    <script>
+        fetch('http://localhost:8080/auth/register',{
+            method:'POST',
+            Headers:{
+                'Accept': 'application/json',
+      'Content-Type': 'application/json' ,
+      'mode': 'no-cors',
+            },
+            body:JSON.stringify({
+                username:"rpmpilar2",
+    contrasena:"12345678",
+    apellidos: "rojas",
+    nombres:"pilar",
+    correo:"pilar@correo.com",  
+    direccion:"calle 14·2-59 barrio sevilla", 
+    celular:"3224376110"
+            })
+        })
+        .then((response)=> response.json())
+				.then((data)=>{
+					debugger
+				})
+    </script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/registrer.js"></script>
 </body>
