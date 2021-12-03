@@ -31,16 +31,18 @@
             <!--Formulario de Login y registro-->
             <div class="contenedor__login-register">
                 <!--Login-->
-                <form id="entrarForm" class="formulario__login" method="post" action="http://localhost:8080/auth/login">
+                <form id="entrarForm" class="formulario__login" method="post" onsubmit=catalogo.html>
                     <h2>Iniciar Sesión</h2>
-                    <input name="username" type="text" placeholder="Usuario">
-                    <input name="password" type="password" placeholder="Contraseña">
+                    <input name="username" id="username" type="text" placeholder="Usuario">
+                    <input name="password" id="password" type="password" placeholder="Contraseña">
                     <button id="entrarbutton" type="submit">Entrar</button>
+    
+                        <input id="entrarFormButton" type="submit" value="Registrar" onclick="login()" />
                     &nbsp;&nbsp;
                     <a href="indexAdmin.html">admin</a>
                 </form>
                 <!--Register-->
-                <form id="registrerForm" class="formulario__register" method="post" action="http://localhost:8080/auth/register">
+                <form id="registrerForm" class="formulario__register" method="post" action="catalogo.html">
                     <h2>Regístrarse</h2>
                     <input name="username" type="text" placeholder="Nombre de Ususario">
                     <input name="contraseña" type="password" placeholder="Contraseña">
@@ -54,7 +56,7 @@
             </div>
         </div>
     </main>
-    <script>
+    <!-- <script>
         fetch('http://localhost:8080/auth/register',{
             method:'POST',
             Headers:{
@@ -76,8 +78,11 @@
 				.then((data)=>{
 					debugger
 				})
-    </script>
+    </script> -->
+
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/login.js"></script>
     <script src="assets/js/registrer.js"></script>
+    
 </body>
 </html>
