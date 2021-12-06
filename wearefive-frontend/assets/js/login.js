@@ -89,7 +89,7 @@ async  function loginAdmin(){
   //se guarda la respuesta del fetch (recordar colocar la configuracion en caso de necesitarla para POST,PUT,DELETE.
   // en get no tiende a ser necesaria a no ser que use permisos o lo ustedes vean)
   //el url del fetch lo pueden sacar del endpoint que hay en el documento ingenieril o postman si estan en grupo
-      const response = await fetch('http://localhost:8080/auth/login', config)
+      const response = await fetch("http://"+host()+"/auth/login", config)
       //conversion del fetch 
       const json = await response.json()
       //checker de como llegan los datos para su uso

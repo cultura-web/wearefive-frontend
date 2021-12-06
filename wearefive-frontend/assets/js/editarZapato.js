@@ -17,7 +17,7 @@ const token= window.sessionStorage.getItem('access_token');
 console.log(precioUnitario)
 
 try{
-    const rawResponse = await fetch("http://localhost:8080/api/products/model/"+id, {
+    const rawResponse = await fetch("http://"+host()+"/api/products/model/"+id, {
       method: 'PUT',
       headers: {
         'Authorization':'Bearer '+token,

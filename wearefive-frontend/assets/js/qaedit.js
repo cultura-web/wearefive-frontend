@@ -20,7 +20,7 @@ async function editarQa(){
   const url= new URL(window.location.href);
   const id=url.searchParams.get("idModelo");
   const token= window.sessionStorage.getItem('access_token');
-const u = "http://localhost:8080/api/qa/edit/"+id
+const u = "http://"+host()+"/api/qa/edit/"+id
 console.log(u)
 try{
     const rawResponse = await fetch(u, {

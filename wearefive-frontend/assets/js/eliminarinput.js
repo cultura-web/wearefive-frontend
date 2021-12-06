@@ -1,7 +1,7 @@
 const div_base= document.getElementById('product')
 const url= new URL(window.location.href);
 const id=url.searchParams.get("idModelo");
-fetch("http://localhost:8080/api/products/model?idModelo="+id)
+fetch("http://"+host()+"/api/products/model?idModelo="+id)
 .then(response => response.ok ? Promise.resolve(response) : Promise.reject(response))
 .then(response => response.json())
 .then(data => {
