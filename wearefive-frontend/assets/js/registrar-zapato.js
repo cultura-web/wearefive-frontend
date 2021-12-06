@@ -10,8 +10,13 @@ const $costoTotal= document.getElementById('costoTotal').value
 const $material= document.getElementById('material').value
 const $detalle= document.getElementById('detalle').value
 const $descuento= document.getElementById('descuento').value
+
+
 const token= window.sessionStorage.getItem('access_token');
-    const rawResponse = await fetch('http://localhost:8080/api/products/model', {
+
+
+
+    const rawResponse = await fetch('http://'+host()+'/api/products/model', {
       method: 'POST',
       headers: {
         'Authorization':'Bearer '+token,
@@ -47,8 +52,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
         var formData = new FormData(this);
         var jsonData = {};
         for (var [k, v] of formData) {
+
             jsonData[k] = v;
         }
+        if(jsonData.json().status===403)
+        alert("error usted no posee permisos para esta ventana por favor salga o contacte a un tecnico de ser necesario");
         console.log(jsonData);
     }
 }  )

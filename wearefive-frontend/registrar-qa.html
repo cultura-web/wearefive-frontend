@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>WE ARE FIVE</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="is-preload">
+    <div id="page-wrapper">
+        <!-- Header -->
+			<!-- Header -->
+            <header id="header">
+                <h1><a href="indexAdmin.html">WE ARE FIVE</a> &nbsp BIENVENIDO ADMIN</h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="registrar-zapato.html">REGISTRAR ZAPATO</a></li>
+                    <li><a href="catalogo.html">CATALOGO</a></li>
+                    <li><a href="foro.html">FORO</a></li>
+                    <li><a href="qa.html">QACRUD</a></li>
+                    <li><a href="index.html" class="button">Cerrar Sesión</a></li>							
+            </nav>
+        </header>
+        <!-- Main -->
+        <section id="main" class="container medium">
+            <header>
+                <h2 style="color: white;">Nuevo Q&A</h2>
+                <p  style="color: white;">Ingresa todos los datos para agregar un nuevo Q&A</p>
+            </header>
+            <div class="boxRegistrarQA">
+                <form method="post" id="registrarQA">
+                    <div class="row gtr-50 gtr-uniform">
+                        <div class="col-12">
+                            <input type="text" name="pregunta" id="pregunta" value="" placeholder="pregunta" />
+                        </div>
+                        <div class="col-12">
+                            <textarea name="respuesta" id="respuesta" placeholder="respuesta" rows="6"></textarea>
+                        </div>
+                        
+                        <div class="col-12">
+                            <input id="registrarQAButton" type="submit" value="Registrar" onclick="qaPost()"/>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- Footer -->
+		<footer id="footer">
+			<ul class="icons">
+				<li><a href="https://www.facebook.com/"><img src="images/facebook.png"></a></li>
+
+				<li><a href="https://api.whatsapp.com/send?phone=0123456789"><img src="images/whatsapp.png"></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; TODOS LOS DERECHOS RESERVADOS</li>
+				<li>Diseñado por <a href="#">CULTURA WEB</a></li>
+			</ul>
+		</footer>
+	</div>
+    </div>
+    <!-- Scripts -->
+    <script src="assets/js/host.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/registrar-qa.js"></script>
+</body>
+</html>

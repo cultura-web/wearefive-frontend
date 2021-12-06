@@ -1,4 +1,4 @@
-fetch("http://localhost:8080/api/products/list")
+fetch("http://"+host()+"/api/products/list")
 .then(response => response.ok ? Promise.resolve(response) : Promise.reject(response))
 .then(response => response.json())
 .then(data => {

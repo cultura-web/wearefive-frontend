@@ -1,6 +1,28 @@
+
+// const token= window.sessionStorage.getItem('access_token');
+
+// const varparseJwt = (token) => {
+//     try {
+//       return JSON.parse(atob(token.split('.')[1]));
+//     } catch (e) {
+//       return null;
+//     }
+//   };
+
+//   const varatob=JSON.parse(atob(token.split('.')[1]));
+// function parseJwt (token) {
+//     var base64Url = token.split('.')[1];
+//     var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+//     var jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+//         return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+//     }).join(''));
+
+//     return JSON.parse(jsonPayload);
+// };
+
 //este fecth responde con los datos para crear el catalogo asi que no es necesario que este en una funcion ya que asi se activa nada mas lo lee html en los scripts
 //el url del fetch lo pueden sacar del endpoint que hay en el documento ingenieril o postman si estan en grupo
-fetch("http://localhost:8080/api/products/list")
+fetch("http://"+host()+"/api/products/list")
 //checker de que funciono
 .then(response => response.ok ? Promise.resolve(response) : Promise.reject(response))
 //conversion de la variable que almacena el fetch(esta se inicializa por el then al parecer como si fuera una y usaras "cd archivo dentro de la ruta")
@@ -53,7 +75,7 @@ fetch("http://localhost:8080/api/products/list")
 //input contiene el input oculto que redirige por medio de luego por el button su valor al url proximo que sera el de detalle.html para generar los valores de la tabla
     const input=document.createElement('input')
     input.type="hidden"
-    input.id="idModelo"
+
     input.name="idModelo"
     input.value=product.id
 
@@ -88,5 +110,7 @@ fetch("http://localhost:8080/api/products/list")
     //fin
 })
 
-
+console.log(parseJwt(token));
+console.log(varparseJwt);
+console.log(varatob);
 
