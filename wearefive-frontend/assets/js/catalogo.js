@@ -75,7 +75,6 @@ fetch("http://"+host()+"/api/products/list")
 //input contiene el input oculto que redirige por medio de luego por el button su valor al url proximo que sera el de detalle.html para generar los valores de la tabla
     const input=document.createElement('input')
     input.type="hidden"
-
     input.name="idModelo"
     input.value=product.id
 
@@ -109,9 +108,3 @@ fetch("http://"+host()+"/api/products/list")
 
     //fin
 })
-
-console.log(parseJwt(token));
-console.log(varparseJwt);
-console.log(varatob);
-
-

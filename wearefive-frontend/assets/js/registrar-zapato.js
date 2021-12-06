@@ -36,19 +36,3 @@ const token= window.sessionStorage.getItem('access_token');
   
     console.log(content);
   };
-
-document.addEventListener("DOMContentLoaded", function (e) {
-    var miForm = document.getElementById('registrarZapato');
-    miForm.onsubmit = function (e) {
-        e.preventDefault();
-        var formData = new FormData(this);
-        var jsonData = {};
-        for (var [k, v] of formData) {
-
-            jsonData[k] = v;
-        }
-        if(jsonData.json().status===403)
-        alert("error usted no posee permisos para esta ventana por favor salga o contacte a un tecnico de ser necesario");
-        console.log(jsonData);
-    }
-}  )
