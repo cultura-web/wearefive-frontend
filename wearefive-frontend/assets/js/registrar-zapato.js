@@ -10,11 +10,7 @@ const $costoTotal= document.getElementById('costoTotal').value
 const $material= document.getElementById('material').value
 const $detalle= document.getElementById('detalle').value
 const $descuento= document.getElementById('descuento').value
-
-
 const token= window.sessionStorage.getItem('access_token');
-
-
 
     const rawResponse = await fetch('http://'+host()+'/api/products/model', {
       method: 'POST',
@@ -40,10 +36,6 @@ const token= window.sessionStorage.getItem('access_token');
   
     console.log(content);
   };
-
-
-
-
 
 document.addEventListener("DOMContentLoaded", function (e) {
     var miForm = document.getElementById('registrarZapato');
