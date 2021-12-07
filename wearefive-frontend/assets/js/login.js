@@ -94,11 +94,9 @@ async  function loginAdmin(){
       //conversion del fetch 
       const json = await response.json()
       //checker de como llegan los datos para su uso
-      console.log(json)
       //en este caso se guarda la variable token en sesion para dure toda la sesion del usuario
       window.sessionStorage.setItem('access_token', json.token)
       //checker que ahora no sirve ya que redirecciona inmediatamente pero lo que hace es asegurar que esta el token en la sesion
-      console.log(window.sessionStorage.getItem('access_token'))
       //redireccion y final de este codigo
       window.location.href = 'indexadmin.html';
     }
@@ -108,5 +106,6 @@ async  function loginAdmin(){
              console.log("error")
              window.location.href = 'indexadmin.html';
      }
+     window.location.href = 'indexadmin.html';
     }
    

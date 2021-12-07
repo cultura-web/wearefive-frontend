@@ -22,10 +22,10 @@ async  function agregarMaterial(){
       });
       const content = await rawResponse.json();
       
-        window.location.href = 'catalogoAdmin.html';
+        window.location.href = 'materiales.html';
     
     }
     catch(error){
-        window.location.href = 'catalogoAdmin.html';
+        window.location.href = 'materiales.html';
     }
 }
