@@ -49,9 +49,11 @@ amaterial.href="materiales.html"
 limaterial.appendChild(amaterial)
 ul.appendChild(limaterial)
 
-const liagregarmaterial=document.createElement("li")
-const aagregarmaterial=document.createElement("a")
-aagregarmaterial.innerHTML="agregarMATERIALES"
-aagregarmaterial.href="agregarMaterial.html"
-liagregarmaterial.appendChild(aagregarmaterial)
-ul.appendChild(liagregarmaterial)
+
+
+const lilogin=document.createElement("li")
+const alogin=document.createElement("a")
+alogin.innerHTML="INICIAR SESION"
+alogin.href="login_registrer.html"
+lilogin.appendChild(alogin)
+ul.appendChild(lilogin)

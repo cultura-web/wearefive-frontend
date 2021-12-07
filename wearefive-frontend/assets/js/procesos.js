@@ -9,6 +9,7 @@ fetch("http://"+host()+"/api/carrito/list")
 
         const body= document.createElement('tbody')
         body.className="post";
+
          //tdcosto_total
     const tdcosto_total=document.createElement('td')
     tdcosto_total.className= "a"
@@ -43,71 +44,25 @@ const inputQuitar=document.createElement('input')
 inputQuitar.type="hidden"
 inputQuitar.name="idProceso"
 const ButtonQuitar=document.createElement('li')
-
-tdButtonQuitar.appendChild(ButtonQuitar)
-tdButtonQuitar.appendChild(inputQuitar)
-tdButtonQuitar.appendChild(ButtonQuitar)
+formularioQuitar.appendChild(ButtonQuitar)
+formularioQuitar.appendChild(inputQuitar)
+tdButtonQuitar.appendChild(formularioQuitar)
 body.appendChild(tdButtonQuitar)
 
 //tdButtonEditar
 const formularioEditar = document.createElement('form')
-formularioEditar.action = 'editar Proceso.html'
+formularioEditar.action = 'editarProceso.html'
 const tdButtonEditar=document.createElement('td')
 const inputEditar=document.createElement('input')
 inputEditar.type="hidden"
 inputEditar.name="idProceso"
 const ButtonEditar=document.createElement('li')
-
-tdButtonEditar.appendChild(ButtonEditar)
-tdButtonEditar.appendChild(inputEditar)
-tdButtonEditar.appendChild(ButtonEditar)
+formularioEditar.appendChild(ButtonEditar)
+formularioEditar.appendChild(inputEditar)
+tdButtonEditar.appendChild(formularioEditar)
 body.appendChild(tdButtonEditar)
 
-
-
-
-
-
-   
-
-    
-    
-
-    const be = document.createElement('input')
-    be.innerHTML="Eliminar"
-    be.type = "submit"
-
-    input.value=product.id
-    formulario.appendChild(input)
-    formulario.appendChild(be)
-
-    const formulario2 = document.createElement('form')
-    formulario2.action = 'editarZapato.html'
-
-    const be2 = document.createElement('input')
-    be2.innerHTML="Editar"
-    be2.type = "submit"
-
-    const input2=document.createElement('input')
-    input2.type="hidden"
-    input2.name="idCarrito"
-    input2.value=product.id
-    console.log(input2.id)
-
-    formulario2.appendChild(input2)
-    formulario2.appendChild(be2)
-        
-
-
-
-
-    tdButton.appendChild(formulario)
-    tdButton.appendChild(formulario2)
-
-
     table.appendChild(body)
-
-    
     
     }
     })
