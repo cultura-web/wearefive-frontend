@@ -48,3 +48,10 @@ amaterial.innerHTML="MATERIALES"
 amaterial.href="materiales.html"
 limaterial.appendChild(amaterial)
 ul.appendChild(limaterial)
+
+const liagregarmaterial=document.createElement("li")
+const aagregarmaterial=document.createElement("a")
+aagregarmaterial.innerHTML="agregarMATERIALES"
+aagregarmaterial.href="agregarMaterial.html"
+liagregarmaterial.appendChild(aagregarmaterial)
+ul.appendChild(liagregarmaterial)

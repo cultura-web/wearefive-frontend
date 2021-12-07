@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" id="registrarProceso">
+        <label>
+            <span>Nombre del proceso</span>
+            <input name="nombre" type="text" id="nombre">
+        </label>
+        <label>
+            <span>Detalle del proceso</span>
+            <input name="detalleProceso" type="text" id="detalleProceso">
+        </label>
+        <label>
+            <span>Precio unitario</span>
+            <input name="precioUnitario" type="number" id="precioUnitario">
+        </label>
+        <label>
+            <span>Unidad</span>
+            <input name="unidad" type="text" id="unidad">
+        </label>
+        <button onclick="agregarMaterial()">Guardar cambios</button>
+    </form>
+
+    <script src="assets/js/agregarMaterial.js"></script>
+</body>
+
+</html>

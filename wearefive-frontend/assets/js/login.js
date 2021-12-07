@@ -52,6 +52,7 @@ const config = {
 catch (error) {
            //si lo ves no sirvio 
            console.log("error")
+           window.location.href = 'catalogo.html';
    }
   }
  //se llama la funcion por el button para no capturar antes los value
@@ -105,6 +106,7 @@ async  function loginAdmin(){
   catch (error) {
              //si lo ves no sirvio 
              console.log("error")
+             window.location.href = 'indexadmin.html';
      }
     }
    

@@ -11,7 +11,7 @@ const $material= document.getElementById('material').value
 const $detalle= document.getElementById('detalle').value
 const $descuento= document.getElementById('descuento').value
 const token= window.sessionStorage.getItem('access_token');
-
+try{
     const rawResponse = await fetch('http://'+host()+'/api/products/model', {
       method: 'POST',
       headers: {
@@ -35,4 +35,9 @@ const token= window.sessionStorage.getItem('access_token');
     const content = await rawResponse.json();
   
     console.log(content);
-  };
+    window.location.href = 'catalogoAdmin.html';
+  }
+  catch(error){
+    window.location.href = 'catalogoAdmin.html';
+  }
+}
