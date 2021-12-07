@@ -1,4 +1,4 @@
-fetch("http://"+host()+"/api/products/list")
+fetch("http://"+host()+"/api/carrito/list")
 .then(response => response.ok ? Promise.resolve(response) : Promise.reject(response))
 .then(response => response.json())
 .then(data => {
@@ -10,34 +10,50 @@ fetch("http://"+host()+"/api/products/list")
         const body= document.createElement('tbody')
         body.className="post";
     
+        //tdNombre
     const tdNombre=document.createElement('td')
     tdNombre.className= "a"
-    const tdCantidad=document.createElement('td')
-    const tdPrecio=document.createElement('td')
-    const tdButton=document.createElement('td')
-
     const Nombre=document.createElement('h2')
     Nombre.innerHTML=product.nombre
-    console.log(product)
-    
+    tdNombre.appendChild(Nombre)
+    body.appendChild(tdNombre)
+//tdCamtidad
+    const tdCantidad=document.createElement('td')
     const Cantidad=document.createElement('li')
+    Cantidad.innerHTML = product.Cantidad
+    tdCantidad.appendChild(Cantidad)
+    body.appendChild(tdCantidad)
+//tdPrecio
+    const tdPrecio=document.createElement('td')
     const Precio=document.createElement('li')
-    const Button=document.createElement('li')
-
-    Cantidad.innerHTML = product.imagenUrl
     Precio.innerHTML = product.precioVenta
+    tdPrecio.appendChild(Precio)
+    body.appendChild(tdPrecio)
+//tdButtonQuitar
+    const formulario = document.createElement('form')
+    formulario.action = 'eliminar.html'
+    const tdButtonQuitar=document.createElement('td')
+    const ButtonQuitar=document.createElement('li')
+
+    tdButtonQuitar.appendChild(ButtonQuitar)
+    body.appendChild(tdButtonQuitar)
+
+
+
+
+
 
    
 
     
-    const formulario = document.createElement('form')
-    formulario.action = 'eliminar.html'
+    
+
     const be = document.createElement('input')
     be.innerHTML="Eliminar"
     be.type = "submit"
     const input=document.createElement('input')
     input.type="hidden"
-    input.name="idModelo"
+    input.name="idCarrito"
     input.value=product.id
     formulario.appendChild(input)
     formulario.appendChild(be)
@@ -51,24 +67,21 @@ fetch("http://"+host()+"/api/products/list")
 
     const input2=document.createElement('input')
     input2.type="hidden"
-    input2.name="idModelo"
+    input2.name="idCarrito"
     input2.value=product.id
     console.log(input2.id)
 
     formulario2.appendChild(input2)
     formulario2.appendChild(be2)
         
-    tdNombre.appendChild(Nombre)
-    tdCantidad.appendChild(Cantidad)
-    tdPrecio.appendChild(Precio)
-    tdButton.appendChild(Button)
+
+
+
+
     tdButton.appendChild(formulario)
     tdButton.appendChild(formulario2)
 
-    body.appendChild(tdNombre)
-    body.appendChild(tdCantidad)
-    body.appendChild(tdPrecio)
-    body.appendChild(tdButton)
+
     table.appendChild(body)
 
     
