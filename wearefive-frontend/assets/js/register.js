@@ -27,7 +27,7 @@ async function registrar() {
         });
         console.log(await rawResponse.json())
 
-        window.location.href = 'catalogo.html';
+        window.location.href = 'index.html';
     } catch (error) {
         
         window.location.href = 'index.html';

@@ -5,7 +5,7 @@ async  function agregarMaterial(){
   const unidad= document.getElementById('unidad').value
   const token= window.sessionStorage.getItem('access_token')
   try{
-      const rawResponse = await fetch('http://localhost:8080/api/materiales', {
+      const rawResponse = await fetch("http://"+host()+"/api/materiales", {
         method: 'POST',
         headers: {
           'Authorization':'Bearer '+token,
@@ -28,4 +28,5 @@ async  function agregarMaterial(){
     catch(error){
         window.location.href = 'materiales.html';
     }
+    window.location.href = 'materiales.html';
 }
