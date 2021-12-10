@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WE ARE FIVE</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/login_Registrer.css">
+</head>
+<body>
+    <main>
+        <div class="contenedor__todo">
+            <div class="caja__trasera">
+                <div class="caja__trasera-login">
+                    <h3>¿Ya tienes una cuenta?</h3>
+                    <p>Inicia sesión para entrar en la página</p>
+                    <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                    &nbsp;&nbsp;
+                    <a href="index.html" style="color: white;">Regresar</a>
+                </div>
+                <div class="caja__trasera-register">
+                    <h3>¿Aún no tienes una cuenta?</h3>
+                    <p>Regístrate para que puedas iniciar sesión</p>
+                    <button id="btn__registrarse">Regístrarse</button>
+                    &nbsp;&nbsp;
+                    <a href="index.html" style="color: white;">Regresar</a>
+                </div>
+            </div>
+            <!--Formulario de Login y registro-->
+            <div class="contenedor__login-register">
+                <!--Login-->
+                <form id="entrarForm" class="formulario__login" method="post" onsubmit=catalogo.html>
+                    <h2>Iniciar Sesión</h2>
+                    <input name="username" id="username" type="text" placeholder="Usuario">
+                    <input name="password" id="password" type="password" placeholder="Contraseña">
+
+    
+                        <button id="entrarbutton" type="submit"  onclick="login()" > Entrar Cliente</button>
+                        <button id="entrarbuttonAdmin" type="submit"  onclick="loginAdmin()" > Admin Entrar</button>
+                        <a href="indexadmin.html">admin</a>
+                </form>
+                <!--Register-->
+                <form id="registrerForm" class="formulario__register" method="post" >
+                    <h2>Regístrarse</h2>
+                    <input id="usernameR" name="username" type="text" placeholder="Nombre de Ususario">
+                    <input id="contrasena" name="contrasena" type="password" placeholder="Contraseña">
+                    <input id="apellidos" name="apellidos" type="text" placeholder="Apellidos">
+                    <input id="nombres" name="nombres" type="text" placeholder="Nombres">
+                    <input id="correo" name="correo" type="text" placeholder="correo">
+                    <input id="direccion" name="direccion" type="text" placeholder="Direccion">
+                    <input id="celular" name="celular" type="text" placeholder="Celular">
+                    <button id="registrerbutton" type="submit" onclick="registrar()">Regístrarse</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-- <script>
+        fetch('http://localhost:8080/auth/register',{
+            method:'POST',
+            Headers:{
+                'Accept': 'application/json',
+      'Content-Type': 'application/json' ,
+      'mode': 'no-cors',
+            },
+            body:JSON.stringify({
+                username:"rpmpilar2",
+    contrasena:"12345678",
+    apellidos: "rojas",
+    nombres:"pilar",
+    correo:"pilar@correo.com",  
+    direccion:"calle 14·2-59 barrio sevilla", 
+    celular:"3224376110"
+            })
+        })
+        .then((response)=> response.json())
+				.then((data)=>{
+					debugger
+				})
+    </script> -->
+    <script src="assets/js/host.js"></script>
+    <script src="assets/js/headerAdmin.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/register.js"></script>
+    
+</body>
+</html>
