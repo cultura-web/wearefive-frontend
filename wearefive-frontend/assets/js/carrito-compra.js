@@ -30,61 +30,38 @@ fetch("http://"+host()+"/api/carrito/list")
     tdPrecio.appendChild(Precio)
     body.appendChild(tdPrecio)
 //tdButtonQuitar
+const tdButtonQuitar=document.createElement('td')
     const formulario = document.createElement('form')
-    formulario.action = 'eliminar.html'
-    const tdButtonQuitar=document.createElement('td')
+    formulario.action = 'eliminarCarrito.html'
+    const inputQuitar=document.createElement('input')
+    inputQuitar.type="hidden"
+    inputQuitar.name="idProducto"
+    inputQuitar.value=product.id
     const ButtonQuitar=document.createElement('li')
+    formulario.appendChild(ButtonQuitar)
+    tdButtonQuitar.appendChild(formulario)
 
-    tdButtonQuitar.appendChild(ButtonQuitar)
+
+
+
     body.appendChild(tdButtonQuitar)
-
-
-
-
-
-
-   
-
-    
-    
-
-    const be = document.createElement('input')
-    be.innerHTML="Eliminar"
-    be.type = "submit"
-    const input=document.createElement('input')
-    input.type="hidden"
-    input.name="idCarrito"
-    input.value=product.id
-    formulario.appendChild(input)
-    formulario.appendChild(be)
-
-    const formulario2 = document.createElement('form')
-    formulario2.action = 'editarZapato.html'
-
-    const be2 = document.createElement('input')
-    be2.innerHTML="Editar"
-    be2.type = "submit"
-
-    const input2=document.createElement('input')
-    input2.type="hidden"
-    input2.name="idCarrito"
-    input2.value=product.id
-    console.log(input2.id)
-
-    formulario2.appendChild(input2)
-    formulario2.appendChild(be2)
-        
-
-
-
-
-    tdButton.appendChild(formulario)
-    tdButton.appendChild(formulario2)
-
 
     table.appendChild(body)
 
     
     
     }
+    const formularioCompra = document.createElement('form')
+    formulario.action = 'Comprar.html'
+    const inputCompra=document.createElement('input')
+    inputCompra.type="hidden"
+    inputCompra.name="idCliente"
+    inputCompra.value=product.cliente
+    formularioCompra.appendChild(inputCompra)
+    const ButtonCompra=document.createElement('li')
+    formularioCompra.appendChild(ButtonCompra)
+
+    const compra=getElementById("page-wrapper")
+    compra.appendChild(formularioCompra)
+
     })
