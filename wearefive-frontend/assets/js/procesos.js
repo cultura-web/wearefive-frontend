@@ -1,11 +1,31 @@
-fetch("http://"+host()+"/api/carrito/list")
+const token= window.sessionStorage.getItem('access_token')
+const url= new URL(window.location.href);
+const id=url.searchParams.get("idModelo");
+fetch("http://"+host()+"/api/products/model/"+1+"/costs", {
+    method: 'GET',
+    headers: {
+      'Authorization':'Bearer '+token,
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+      
+    }})
+
+    
+
 .then(response => response.ok ? Promise.resolve(response) : Promise.reject(response))
 .then(response => response.json())
 .then(data => {
-
-    const table= document.getElementById('bodyjs')
     
-    for (const product of data.modeloZapatos ){
+
+    for(const product of data.procesos){
+
+        const nombreProceso = document.getElementById('nombreProcesoH2')
+        const costoProceso = document.getElementById('costoTotalH2')
+        nombreProceso.innerHTML = data.nombreModelo
+        costoProceso.innerHTML = data.costoTotal + '$'
+    const table= document.getElementById('bodyjs')
+   
+    
 
         const body= document.createElement('tbody')
         body.className="post";
@@ -14,7 +34,7 @@ fetch("http://"+host()+"/api/carrito/list")
     const tdcosto_total=document.createElement('td')
     tdcosto_total.className= "a"
     const costo_total=document.createElement('h2')
-    costo_total.innerHTML=product.costo_total
+    costo_total.innerHTML=product.costoTotal + '$'
     tdcosto_total.appendChild(costo_total)
     body.appendChild(tdcosto_total)
         //tdNombre
@@ -24,45 +44,66 @@ fetch("http://"+host()+"/api/carrito/list")
     Nombre.innerHTML=product.nombre
     tdNombre.appendChild(Nombre)
     body.appendChild(tdNombre)
-        //tdCamtidad
-    const tdDetalle=document.createElement('td')
-    const Detalle=document.createElement('li')
-    Detalle.innerHTML = product.Detalle
-    tdDetalle.appendChild(Detalle)
-    body.appendChild(tdDetalle)
-//tdModelo_Zapato_Id
-    const tdModelo_Zapato_Id=document.createElement('td')
-    const Modelo_Zapato_Id=document.createElement('li')
-    Modelo_Zapato_Id.innerHTML = product.Modelo_Zapato_IdVenta
-    tdModelo_Zapato_Id.appendChild(Modelo_Zapato_Id)
-    body.appendChild(tdModelo_Zapato_Id)
-//tdButtonQuitar
+//tdProcesos
+    const tdProcesos=document.createElement('td')
+    const proceso=document.createElement('li')
+        proceso.innerHTML = product.detalle//
+    tdProcesos.appendChild(proceso)
+    body.appendChild(tdProcesos)
+    //tdMateriales
+    const formularioMaterial = document.createElement('form')
+formularioMaterial.action = 'verMaterial.html'
+const tdButton2=document.createElement('td')
+const inputMaterial=document.createElement('input')
+inputMaterial.type="hidden"
+inputMaterial.name="idModelo"
+inputMaterial.value=1
+const inputProceso=document.createElement('input')
+inputProceso.type="hidden"
+inputProceso.name="idProceso"
+inputProceso.value=product.idProceso
+const ButtonMaterial=document.createElement('button')
+ButtonMaterial.innerHTML="VER MATERIALES"
+formularioMaterial.appendChild(ButtonMaterial)
+formularioMaterial.appendChild(inputMaterial)
+formularioMaterial.appendChild(inputProceso)
+tdButton2.appendChild(formularioMaterial)
+body.appendChild(tdButton2)
+
+    //ButtonQuitar
+    const tdButton=document.createElement('td')
 const formularioQuitar = document.createElement('form')
-formularioQuitar.action = 'eliminarProceso.html'
-const tdButtonQuitar=document.createElement('td')
+formularioQuitar.action = 'eliminarMaterial.html'
+
 const inputQuitar=document.createElement('input')
 inputQuitar.type="hidden"
-inputQuitar.name="idProceso"
-const ButtonQuitar=document.createElement('li')
+inputQuitar.name="idMaterial"
+inputQuitar.value=product.idMaterial
+const ButtonQuitar=document.createElement('button')
+ButtonQuitar.innerHTML="QUITAR"
 formularioQuitar.appendChild(ButtonQuitar)
 formularioQuitar.appendChild(inputQuitar)
-tdButtonQuitar.appendChild(formularioQuitar)
-body.appendChild(tdButtonQuitar)
+tdButton.appendChild(formularioQuitar)
+body.appendChild(tdButton)
 
-//tdButtonEditar
+//ButtonEditar
 const formularioEditar = document.createElement('form')
-formularioEditar.action = 'editarProceso.html'
-const tdButtonEditar=document.createElement('td')
+formularioEditar.action = 'editarMaterial.html'
+
 const inputEditar=document.createElement('input')
 inputEditar.type="hidden"
-inputEditar.name="idProceso"
-const ButtonEditar=document.createElement('li')
+inputEditar.name="idMaterial"
+inputEditar.value=product.idMaterial
+const ButtonEditar=document.createElement('button')
+ButtonEditar.innerHTML="EDITAR"
 formularioEditar.appendChild(ButtonEditar)
 formularioEditar.appendChild(inputEditar)
-tdButtonEditar.appendChild(formularioEditar)
-body.appendChild(tdButtonEditar)
+tdButton.appendChild(formularioEditar)
+body.appendChild(tdButton)
+
+
 
     table.appendChild(body)
-    
-    }
+
+}
     })
