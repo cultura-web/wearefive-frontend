@@ -1,7 +1,7 @@
 async  function editarZapato(){
-  const url= new URL(window.location.href);
-  const id=url.searchParams.get("idModelo");
-  const nombre= document.getElementById("nombre").value;
+const url= new URL(window.location.href);
+const id=url.searchParams.get("idModelo");
+const nombre= document.getElementById("nombre").value;
 const descripcion=  document.getElementById("descripcion").value;
 const color=  document.getElementById("color").value;
 const tipo=  document.getElementById("tipo").value;

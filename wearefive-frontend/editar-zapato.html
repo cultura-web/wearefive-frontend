@@ -9,17 +9,27 @@
 <body class="is-preload">
     <div id="page-wrapper">
         <!-- Header -->
-			<!-- Header -->
             <header id="header">
                 <h1><a href="indexAdmin.html">WE ARE FIVE</a> &nbsp BIENVENIDO ADMIN</h1>
-            <nav id="nav">
-                <ul>
-                    <li><a href="registrar-zapato.html">REGISTRAR ZAPATO</a></li>
-                    <li><a href="catalogoAdmin.html">CATALOGO ADMIN</a></li>
-                    <li><a href="foro.html">FORO</a></li>
-                    <li><a href="carrito.html">Carrito</a></li>
-                    <li><a href="index.html" class="button">Cerrar Sesión</a></li>							
-            </nav>
+                <nav id="nav">
+                    <ul>
+                        <li>
+                            <a href="#">OPCIONES</a>
+                            <ul style="background-color: rgba(32, 54, 80, 1);">
+                                <li style="color: white;"><a href="registrar-zapato.html">REGISTRAR ZAPATO</a></li>
+                                <li style="color: white;"><a href="agregarProceso.html">AGREGAR PROCESO</a></li>
+                                <li style="color: white;"><a href="agregarMaterial.html">AGREGAR MATERIAL</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="catalogoAdmin.html">CATALOGO ADMIN</a></li>
+                        <li><a href="materiales.html">MATERIALES</a></li>
+                        <li><a href="qa.html">FORO</a></li>
+                        <li><a href="carrito.html">CARRITO</a></li>
+                        <li><a href="indexadmin.html">INICIO</a></li>
+                        <li><a href="index.html" class="button">Cerrar Sesión</a></li>
+                        <li id="ulnav"></li>
+                    </ul>
+                </nav>
         </header>
         <!-- Main -->
         <section id="main" class="container medium">
@@ -83,6 +93,7 @@
     </div>
     <!-- Scripts -->
     <script src="assets/js/host.js"></script>
+    <script src="assets/js/headerAdmin.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.dropotron.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>

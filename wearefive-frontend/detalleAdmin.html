@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
 	<title>WE ARE FIVE</title>
 	<meta charset="utf-8" />
@@ -8,23 +7,35 @@
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" href="assets/css/blog.css">
 </head>
-
 <body class="is-preload">
 	<div id="page-wrapper">
 		<!-- Header -->
 		<header id="header">
 			<h1><a href="indexAdmin.html">WE ARE FIVE</a> &nbsp BIENVENIDO ADMIN</h1>
-		<nav id="nav">
-			<ul id="ulnav">
-
-			</ul>								
-		</nav>
-	</header>
-
+			<nav id="nav">
+				<ul>
+					<li>
+						<a href="#">OPCIONES</a>
+						<ul style="background-color: rgba(32, 54, 80, 1);">
+							<li style="color: white;"><a href="registrar-zapato.html">REGISTRAR ZAPATO</a></li>
+							<li style="color: white;"><a href="agregarProceso.html">AGREGAR PROCESO</a></li>
+							<li style="color: white;"><a href="agregarMaterial.html">AGREGAR MATERIAL</a></li>
+						</ul>
+					</li>
+					<li><a href="catalogoAdmin.html">CATALOGO ADMIN</a></li>
+					<li><a href="materiales.html">MATERIALES</a></li>
+					<li><a href="qa.html">FORO</a></li>
+					<li><a href="carrito.html">CARRITO</a></li>
+					<li><a href="indexadmin.html">INICIO</a></li>
+					<li><a href="index.html" class="button">Cerrar Sesión</a></li>
+					<li id="ulnav"></li>
+				</ul>
+			</nav>
+		</header>
 		<section id="main" class="container">
 			<section class="box special">
 				<span class="image featured">
-					<img id="imgjs" src="images/articulos/2.2 nascar.jpg" alt="" /></span>
+					<img id="imgjs" src="https://i.ibb.co/gt5dQyh/2-2-nascar.jpg" alt="" /></span>
 				<div class="col-12">
 					<select name="color" id="color">
 						<option id="colorjs" value="">- COLOR -</option>
@@ -43,7 +54,7 @@
 							<td>MATERIALES</td>
 							<td>
 								<ul style="text-align: left;" id="materialjs">
-								
+
 								</ul>
 							</td>
 						</tr>
@@ -64,11 +75,13 @@
 							<td id="descuentojs">%-</td>
 						</tr>
 					</table>
-					<a href="editar-zapato.html"> editar zapato</a>	
+					<!-- SE TIENE QUE HACER UN JS QUE HAGA LOS LLAMADOS DE LOS DETALLES EN LOS INPUTS DEL FORMULARIO
+					DE EDITAR DETALLE-->
+					<a href="editar-zapato.html"> editar zapato</a>
 					<input type="submit" value="Editar detalles">
 					&nbsp;
 					<input style="background-color: red;" type="submit" value="Borrar zapato">
-	
+                    <!---->
 					<section id="main" class="container medium">
 						<section id="one">
 							<section id="main" class="container medium">
@@ -132,5 +145,4 @@
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/detalle.js"></script>
 </body>
-
 </html>

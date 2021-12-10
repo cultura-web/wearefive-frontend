@@ -6,31 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
 </head>
+<!-- Header -->
 <body class="is-preload">
     <div id="page-wrapper">
-        <!-- Header -->
-			<header id="header">
-				<h1><a href="indexAdmin.html">WE ARE FIVE</a> &nbsp BIENVENIDO ADMIN</h1>
-			<nav id="nav">
-				<ul>
-					<li>
-						<a href="#">OPCIONES</a>
-						<ul>
-							<li><a href="registrar-zapato.html">REGISTRAR ZAPATO</a></li>
-							<li><a href="agregarProceso.html">AGRGEAR PROCESO</a></li>
-						</ul>
-					</li>
-					<li><a href="catalogoAdmin.html">CATALOGO ADMIN</a></li>
-					<li><a href="foro.html">FORO</a></li>
-					<li><a href="modelozapato.html">MODELOS</a></li>
-					<li><a href="index.html" class="button">Cerrar Sesión</a></li>						
-            </nav>
-        </header>
+<header id="header">
+    <h1><a href="indexAdmin.html">WE ARE FIVE</a> &nbsp BIENVENIDO ADMIN</h1>
+    <nav id="nav">
+        <ul>
+            <li>
+                <a href="#">OPCIONES</a>
+                <ul style="background-color: rgba(32, 54, 80, 1);">
+                    <li style="color: white;"><a href="registrar-zapato.html">REGISTRAR ZAPATO</a></li>
+                    <li style="color: white;"><a href="agregarProceso.html">AGREGAR PROCESO</a></li>
+                    <li style="color: white;"><a href="agregarMaterial.html">AGREGAR MATERIAL</a></li>
+                </ul>
+            </li>
+            <li><a href="catalogoAdmin.html">CATALOGO ADMIN</a></li>
+            <li><a href="materiales.html">MATERIALES</a></li>
+            <li><a href="qa.html">FORO</a></li>
+            <li><a href="carrito.html">CARRITO</a></li>
+            <li><a href="indexadmin.html">INICIO</a></li>
+            <li><a href="index.html" class="button">Cerrar Sesión</a></li>
+            <li id="ulnav"></li>
+        </ul>
+    </nav>
+</header>
         <!-- Main -->
         <section id="main" class="container medium">
             <header>
                 <h2 style="color: white;">Editar Proceso</h2>
+<<<<<<< HEAD
                 <p  style="color: white;">Actualiza los datos para el proceso</p>
+=======
+                <p style="color: white;">Ingresa los nuevos datos para el proceso</p>
+>>>>>>> 34a7e5ec0856cad31bf01fcf82f8ff02bf7df05d
             </header>
             <div class="boxRegistrarZapato">
                 <form method="post" id="registrarZapato">
@@ -39,6 +48,7 @@
                             <input type="text" name="nombre" id="nombre" value="nombre" placeholder="Nombre" />
                         </div>
                         <div class="col-12">
+<<<<<<< HEAD
                             <textarea name="detalle" id="detalle" value="detalle" placeholder="Detalle" rows="6"></textarea>
                         </div>
                         <div class="col-6 col-12-mobilep">
@@ -54,12 +64,44 @@
                         </div>
                         <div class="col-12">
                             <input id="registrarZapatoButton" type="submit" value="Registrar" onclick="editarProceso()"/>
+=======
+                            <textarea name="detalle" id="detalle" placeholder="detalle" rows="6"></textarea>
+                        </div>
+                        <style>
+                            .puntero {
+                                cursor: pointer;
+                            }
+
+                            .ocultar {
+                                display: none;
+                            }
+                        </style>
+
+                        <div class=" col-12 clonar">
+                            <div class="col-6 col-12-mobilep ">
+                                <select type="text" class="form-control" name="nombre[]">
+                                    <option value="value1" selected>Selecciona...</option>
+                                    <option value="value2">--</option>
+                                    <option value="value3">--</option>
+                                </select>
+                                <input type="number" name="Cantidad" id="Cantidad" value="Cantidad" placeholder="Cantidad">
+                                <span class="button1 puntero ocultar" style="background-color: red; color: white;">Eliminar</span>
+                            </div>
+                        </div>
+                        <div class="col-12 clonar" id="contenedor"></div>
+                        <div class="col-12">
+                            <button class="button" style="background-color: green;" id="agregar">Agregar campo +</button>
+                        </div>
+                        <div class="col-12">
+                            <input id="registrarZapatoButton" type="submit" value="Actualizar" onclick="productPost()" />
+>>>>>>> 34a7e5ec0856cad31bf01fcf82f8ff02bf7df05d
                         </div>
                     </div>
                 </form>
             </div>
         </section>
         <!-- Footer -->
+<<<<<<< HEAD
 		<footer id="footer">
 			<ul class="icons">
 				<li><a href="https://www.facebook.com/"><img src="images/facebook.png"></a></li>
@@ -75,12 +117,57 @@
     </div>
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
+=======
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></a></li>
+
+                <li><a href="https://api.whatsapp.com/send?phone=0123456789"><img src="images/whatsapp.png"></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; TODOS LOS DERECHOS RESERVADOS</li>
+                <li>Diseñado por <a href="#">CULTURA WEB</a></li>
+            </ul>
+        </footer>
+    </div>
+    </div>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/headerAdmin.js"></script>
+>>>>>>> 34a7e5ec0856cad31bf01fcf82f8ff02bf7df05d
     <script src="assets/js/jquery.dropotron.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+<<<<<<< HEAD
     <script src="assets/js/editarProceso.js"></script>
+=======
+    <script>
+        let agregar = document.getElementById('agregar');
+        let contenido = document.getElementById('contenedor');
+
+        agregar.addEventListener('click', e => {
+            e.preventDefault();
+
+            let clonado = document.querySelector('.clonar');
+            let clon = clonado.cloneNode(true);
+
+            contenido.appendChild(clon).classList.remove('clonar');
+
+            let remover = contenido.lastChild.childNodes[1].querySelectorAll('span');
+            remover[0].classList.remove('ocultar');
+        });
+
+        contenido.addEventListener('click', e => {
+            e.preventDefault();
+            if (e.target.classList.contains('puntero')) {
+                let contenedor = e.target.parentNode.parentNode;
+                contenedor.parentNode.removeChild(contenedor);
+            }
+        });
+    </script>
+>>>>>>> 34a7e5ec0856cad31bf01fcf82f8ff02bf7df05d
 </body>
 </html>
