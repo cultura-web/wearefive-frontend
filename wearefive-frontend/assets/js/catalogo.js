@@ -50,7 +50,7 @@ fetch("http://"+host()+"/api/products/list")
     //secuencia iterativa que lee hasta que pase por todos los espacios del array que en este caso es  data.modeloZapatos
     //data.modeloZapatos esta asi ya que si por postman ven el body este tiene la capa modeloZapatos enserando el array asi que hay que entrar a esta
     //usamos una const, var, let(como vean) para guardar el valor dado en ciclo for tirado por data.modeloZapatos[n(iteracion)]
-    for (const product of data.modeloZapatos ){
+    for (const product of data.modelosZapatos ){
         //se crea un const, var, let(como vean) para luego usar el objeto creado(en el create element va entre '' el nombre de objeto html que crearan)
     const content=document.createElement('form')
     //datos que configuramos del objeto html creado por medio del const, var, let(como vean) que lo guarda
