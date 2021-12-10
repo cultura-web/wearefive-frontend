@@ -1,6 +1,6 @@
 const ul = document.getElementById("ulnav")
 
-const lizapato=document.createElement("li")
+/** const lizapato=document.createElement("li")
 const azapato=document.createElement("a")
 azapato.innerHTML="REGISTRAR ZAPATO"
 azapato.href="registrar-zapato.html"
@@ -56,7 +56,7 @@ const alogin=document.createElement("a")
 alogin.innerHTML="INICIAR SESION"
 alogin.href="login_registrer.html"
 lilogin.appendChild(alogin)
-ul.appendChild(lilogin)
+ul.appendChild(lilogin) */
 
 const libuscar=document.createElement("li")
 const formularioB=document.createElement("form")
