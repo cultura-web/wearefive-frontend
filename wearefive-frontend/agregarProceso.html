@@ -1,6 +1,5 @@
-<!DOCTYPE html>
-<HTML>
-
+<!DOCTYPE HTML>
+<html>
 <head>
     <title>WE ARE FIVE</title>
     <meta charset="utf-8" />
@@ -8,6 +7,8 @@
     <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <!-- Header -->
+<body class="is-preload">
+    <div id="page-wrapper">
 <header id="header">
     <h1><a href="indexAdmin.html">WE ARE FIVE</a> &nbsp BIENVENIDO ADMIN</h1>
     <nav id="nav">
@@ -33,8 +34,8 @@
         <!-- Main -->
         <section id="main" class="container medium">
             <header>
-                <h2 style="color: white;">Nuevo Proceso</h2>
-                <p style="color: white;">Ingresa los datos para el proceso</p>
+                <h2 style="color: white;">Agregar Proceso</h2>
+                <p style="color: white;">Ingresa los nuevos datos para el proceso</p>
             </header>
             <div class="boxRegistrarZapato">
                 <form method="post" id="registrarZapato">
@@ -55,15 +56,15 @@
                             }
                         </style>
 
-                        <div class=" col-12 clonar">
+                        <div class=" col-12 clonar casilla" name="">
                             <div class="col-6 col-12-mobilep ">
-                                <select type="text" class="form-control" name="nombre[]">
+                                <select type="text" class="form-control clonSelect" name="Select" id="materialCombo">
                                     <option value="value1" selected>Selecciona...</option>
                                     <option value="value2">--</option>
                                     <option value="value3">--</option>
                                 </select>
-                                <input type="number" name="Cantidad" id="Cantidad" value="Cantidad" placeholder="Cantidad">
-                                <span class="button1 puntero ocultar" style="background-color: red; color: white;">Eliminar</span>
+                                <input class="clonCantidad" type="number" name="Cantidad" id="Cantidad" value="Cantidad" placeholder="Cantidad">
+                                <br>
                             </div>
                         </div>
                         <div class="col-12 clonar" id="contenedor"></div>
@@ -71,12 +72,20 @@
                             <button class="button" style="background-color: green;" id="agregar">Agregar campo +</button>
                         </div>
                         <div class="col-12">
-                            <input id="registrarZapatoButton" type="submit" value="Registrar" onclick="productPost()" />
+                            <button class="button" style="background-color: green;" id="eliminar">Eliminar campo +</button>
+                        </div>
+                        <div class="col-12">
+  
+
                         </div>
                     </div>
                 </form>
             </div>
         </section>
+        <form action="procesos.html">
+            <input type="hidden" id="agregarinput" name="idModelo">
+        <button class="button" style="background-color: green;" onclick="agregarProceso()">AGREGAR</button>
+        </form>
         <!-- Footer -->
         <footer id="footer">
             <ul class="icons">
@@ -93,35 +102,50 @@
     </div>
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/host.js"></script>
     <script src="assets/js/headerAdmin.js"></script>
+    <script src="assets/js/materialCombo.js"></script>
     <script src="assets/js/jquery.dropotron.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
+    
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/agregarProceso.js"></script>
     <script>
         let agregar = document.getElementById('agregar');
+        let eliminar = document.getElementById('eliminar');
         let contenido = document.getElementById('contenedor');
-
+        let contador =1;
         agregar.addEventListener('click', e => {
             e.preventDefault();
 
             let clonado = document.querySelector('.clonar');
             let clon = clonado.cloneNode(true);
 
-            contenido.appendChild(clon).classList.remove('clonar');
+            
+            contador++;
+            let clonSelect= clon.querySelector('.clonSelect');
+            clonSelect.setAttribute("name","Select"+contador)
+            let clonCantidad= clon.querySelector('.clonCantidad');
+            clonCantidad.setAttribute("name","Cantidad"+contador)
 
-            let remover = contenido.lastChild.childNodes[1].querySelectorAll('span');
-            remover[0].classList.remove('ocultar');
+            clon.setAttribute("name","div"+contador)
+            contenido.appendChild(clon).classList.remove('clonar');
+            console.log(document.getElementsByClassName("casilla"));
         });
 
-        contenido.addEventListener('click', e => {
+        eliminar.addEventListener('click', e => {
             e.preventDefault();
-            if (e.target.classList.contains('puntero')) {
-                let contenedor = e.target.parentNode.parentNode;
-                contenedor.parentNode.removeChild(contenedor);
-            }
+            let casillas=document.getElementsByClassName("casilla").length;
+            if(casillas>1){
+let borrar= document.getElementsByName("div"+casillas)[0];
+               console.log(borrar);
+               borrar.parentNode.removeChild(borrar);
+               contador--;
+
+        }
         });
     </script>
 </body>

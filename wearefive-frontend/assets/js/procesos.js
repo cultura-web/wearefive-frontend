@@ -1,7 +1,7 @@
 const token= window.sessionStorage.getItem('access_token')
 const url= new URL(window.location.href);
 const id=url.searchParams.get("idModelo");
-fetch("http://"+host()+"/api/products/model/"+1+"/costs", {
+fetch("http://"+host()+"/api/products/model/"+id+"/costs", {
     method: 'GET',
     headers: {
       'Authorization':'Bearer '+token,
@@ -73,12 +73,12 @@ body.appendChild(tdButton2)
     //ButtonQuitar
     const tdButton=document.createElement('td')
 const formularioQuitar = document.createElement('form')
-formularioQuitar.action = 'eliminarMaterial.html'
+formularioQuitar.action = 'eliminarProceso.html'
 
 const inputQuitar=document.createElement('input')
 inputQuitar.type="hidden"
-inputQuitar.name="idMaterial"
-inputQuitar.value=product.idMaterial
+inputQuitar.name="idProceso"
+inputQuitar.value=product.idProceso
 const ButtonQuitar=document.createElement('button')
 ButtonQuitar.innerHTML="QUITAR"
 formularioQuitar.appendChild(ButtonQuitar)
@@ -88,12 +88,12 @@ body.appendChild(tdButton)
 
 //ButtonEditar
 const formularioEditar = document.createElement('form')
-formularioEditar.action = 'editarMaterial.html'
+formularioEditar.action = 'editarProceso.html'
 
 const inputEditar=document.createElement('input')
 inputEditar.type="hidden"
-inputEditar.name="idMaterial"
-inputEditar.value=product.idMaterial
+inputEditar.name="idProceso"
+inputEditar.value=product.idProceso
 const ButtonEditar=document.createElement('button')
 ButtonEditar.innerHTML="EDITAR"
 formularioEditar.appendChild(ButtonEditar)
