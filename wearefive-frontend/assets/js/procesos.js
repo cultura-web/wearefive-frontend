@@ -79,10 +79,15 @@ const inputQuitar=document.createElement('input')
 inputQuitar.type="hidden"
 inputQuitar.name="idProceso"
 inputQuitar.value=product.idProceso
+const inputModelo=document.createElement('input')
+inputModelo.type="hidden"
+inputModelo.name="idModelo"
+inputModelo.value=id
 const ButtonQuitar=document.createElement('button')
 ButtonQuitar.innerHTML="QUITAR"
 formularioQuitar.appendChild(ButtonQuitar)
 formularioQuitar.appendChild(inputQuitar)
+formularioQuitar.appendChild(inputModelo)
 tdButton.appendChild(formularioQuitar)
 body.appendChild(tdButton)
 
@@ -94,10 +99,15 @@ const inputEditar=document.createElement('input')
 inputEditar.type="hidden"
 inputEditar.name="idProceso"
 inputEditar.value=product.idProceso
+const inputModelo2=document.createElement('input')
+inputModelo2.type="hidden"
+inputModelo2.name="idModelo"
+inputModelo2.value=id
 const ButtonEditar=document.createElement('button')
 ButtonEditar.innerHTML="EDITAR"
 formularioEditar.appendChild(ButtonEditar)
 formularioEditar.appendChild(inputEditar)
+formularioEditar.appendChild(inputModelo2)
 tdButton.appendChild(formularioEditar)
 body.appendChild(tdButton)
 
