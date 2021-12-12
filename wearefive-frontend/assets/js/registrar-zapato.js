@@ -12,6 +12,7 @@ const $detalle= document.getElementById('detalle').value
 const $descuento= document.getElementById('descuento').value
 const token= window.sessionStorage.getItem('access_token');
 try{
+
     const rawResponse = await fetch('http://'+host()+'/api/products/model', {
       method: 'POST',
       headers: {
@@ -33,11 +34,25 @@ try{
     })
     });
     const content = await rawResponse.json();
-  
-    console.log(content);
     window.location.href = 'catalogoAdmin.html';
-  }
-  catch(error){
-    window.location.href = 'catalogoAdmin.html';
-  }
+    
+   
+    if($precioUnitario < $costoTotal) throw new SyntaxError("El precio unitario no puede ser mayor al precio total")
+    if(!$nombre) throw new SyntaxError("Nombre es obligatorio para agregar un modelo de zapato")
+    if(!$descripcion) throw new SyntaxError("Descripcion es obligatorio para agregar un modelo de zapato")
+    if(!$color) throw new SyntaxError("Color es obligatorio para agregar un modelo de zapato")
+    if(!$precioUnitario) throw new SyntaxError("Precio unitario es obligatorio para agregar un modelo de zapato")
+    if(!$costoTotal) throw new SyntaxError("Costo total es obligatorio para agregar un modelo de zapato")
+    if(!$material) throw new SyntaxError("Material es obligatorio para agregar un modelo de zapato")
+    if(!$detalle) throw new SyntaxError("Detalle es obligatorio para agregar un modelo de zapato")
+    if(!$descuento) throw new SyntaxError("Descuento es obligatorio para agregar un modelo de zapato")
 }
+catch(error){
+  alert(error)
+  window.location.href = 'registrar-zapato.html';
+  console.log(error)
+}
+
+}
+
+
