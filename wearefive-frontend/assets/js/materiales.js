@@ -73,4 +73,9 @@ body.appendChild(tdButton)
     table.appendChild(body)
     
     }
-    })
+    if (!response.ok) throw Error(response.status);
+
+    return response;
+})
+.catch(error => console.log(error)); 
+

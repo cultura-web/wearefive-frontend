@@ -58,5 +58,10 @@ if(zapato.descuento!==undefined){
 descuentojs.innerHTML=zapato.descuento;}
 else{
 descuentojs.innerHTML="none";}
-})
 
+if (!response.ok) throw Error(response.status);
+
+      return response;
+  })
+  .then(response => console.log("ok"))
+  .catch(error => console.log(error)); 

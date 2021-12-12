@@ -28,9 +28,14 @@ async function registrar() {
         console.log(await rawResponse.json())
 
         window.location.href = 'index.html';
-    } catch (error) {
-        
-        window.location.href = 'index.html';
-    }
+    //ERRORES
+    
+    if (!rawResponse.ok) throw Error(response.statusText);
+   
+  } catch(error) {
+       alert(error)
+       window.location.href = 'login_registrer.html';
+       console.log(error)
+  }
 
 };
