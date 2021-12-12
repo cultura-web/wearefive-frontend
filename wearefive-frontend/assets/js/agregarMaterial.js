@@ -24,15 +24,14 @@ try{
     
       window.location.href = 'materiales.html';
   
-      if(!nombre) throw new SyntaxError("Nombre es obligatorio para agregar un modelo de zapato")
-      if(!detalle) throw new SyntaxError("Detalle es obligatorio para agregar un modelo de zapato")
-      if(!precioUnitario) throw new SyntaxError("Precio unitario es obligatorio para agregar un modelo de zapato")
-      if(!unidad) throw new SyntaxError("Unidad unitario es obligatorio para agregar un modelo de zapato")
+      if(!nombre) throw new SyntaxError("Nombre es obligatorio para agregar un material")
+      if(!detalle) throw new SyntaxError("Detalle es obligatorio para agregar un material")
+      if(!precioUnitario) throw new SyntaxError("Precio unitario es obligatorio para agregar un material")
+      if(!unidad) throw new SyntaxError("Unidad unitario es obligatorio para agregar un material")
   }
   catch(error){
     alert(error);
     window.location.href = 'agregarMaterial.html';
     console.log(error);
   }
-  window.location.href = 'materiales.html';
 }

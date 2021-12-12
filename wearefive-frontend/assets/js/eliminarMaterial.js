@@ -23,7 +23,6 @@ async  function eliminarMaterial(){
   
   }
    catch(error){
-    alert(error)
       window.location.href = 'materiales.html';
   }
   }

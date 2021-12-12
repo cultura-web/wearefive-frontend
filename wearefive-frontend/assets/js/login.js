@@ -1,6 +1,7 @@
 
 
 
+
 //se llama la funcion por el button para no capturar antes los value
 async  function login(){
   //valores que en este caso recibimos del html por su id y pasaremos al body del json
@@ -47,13 +48,14 @@ async  function login(){
       console.log(window.sessionStorage.getItem('access_token'))
       //redireccion y final de este codigo
       window.location.href = 'catalogo.html';
-      if (!response.ok) throw Error(response.status);
+      if (!response.ok) throw Error("Username o contraseña incorrecta");
       if(!username) throw new SyntaxError("Username es obligatorio para iniciar sesion")
       if(!password) throw new SyntaxError("Introdusca la contraseña")
     }
   
   catch (error) {
              //si lo ves no sirvio 
+             alert(error)
              console.log("error")
              window.location.href = 'login_registrer.html';
      }
@@ -102,16 +104,18 @@ async  function login(){
         //checker que ahora no sirve ya que redirecciona inmediatamente pero lo que hace es asegurar que esta el token en la sesion
         //redireccion y final de este codigo
         window.location.href = 'indexadmin.html';
-        if (!response.ok) throw Error(response.status);
+        if (!response.ok) throw Error("Username o contraseña incorrecta");
         if(!username) throw new SyntaxError("Username es obligatorio para iniciar sesion")
         if(!password) throw new SyntaxError("Introdusca la contraseña")
       }
     
     catch (error) {
                //si lo ves no sirvio 
-               console.log("error")
+               alert(error)
                window.location.href = 'login_registrer.html';
+               console.log(error)
        }
        
       }
      
+  
