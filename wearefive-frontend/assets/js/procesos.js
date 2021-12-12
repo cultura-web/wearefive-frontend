@@ -1,7 +1,7 @@
 const token= window.sessionStorage.getItem('access_token')
 const url= new URL(window.location.href);
 const id=url.searchParams.get("idModelo");
-fetch("http://"+host()+"/api/products/model/"+1+"/costs", {
+fetch("http://"+host()+"/api/products/model/"+id+"/costs", {
     method: 'GET',
     headers: {
       'Authorization':'Bearer '+token,
@@ -57,7 +57,7 @@ const tdButton2=document.createElement('td')
 const inputMaterial=document.createElement('input')
 inputMaterial.type="hidden"
 inputMaterial.name="idModelo"
-inputMaterial.value=1
+inputMaterial.value=id
 const inputProceso=document.createElement('input')
 inputProceso.type="hidden"
 inputProceso.name="idProceso"
@@ -73,31 +73,41 @@ body.appendChild(tdButton2)
     //ButtonQuitar
     const tdButton=document.createElement('td')
 const formularioQuitar = document.createElement('form')
-formularioQuitar.action = 'eliminarMaterial.html'
+formularioQuitar.action = 'eliminarProceso.html'
 
 const inputQuitar=document.createElement('input')
 inputQuitar.type="hidden"
-inputQuitar.name="idMaterial"
-inputQuitar.value=product.idMaterial
+inputQuitar.name="idProceso"
+inputQuitar.value=product.idProceso
+const inputModelo=document.createElement('input')
+inputModelo.type="hidden"
+inputModelo.name="idModelo"
+inputModelo.value=id
 const ButtonQuitar=document.createElement('button')
 ButtonQuitar.innerHTML="QUITAR"
 formularioQuitar.appendChild(ButtonQuitar)
 formularioQuitar.appendChild(inputQuitar)
+formularioQuitar.appendChild(inputModelo)
 tdButton.appendChild(formularioQuitar)
 body.appendChild(tdButton)
 
 //ButtonEditar
 const formularioEditar = document.createElement('form')
-formularioEditar.action = 'editarMaterial.html'
+formularioEditar.action = 'editarProceso.html'
 
 const inputEditar=document.createElement('input')
 inputEditar.type="hidden"
-inputEditar.name="idMaterial"
-inputEditar.value=product.idMaterial
+inputEditar.name="idProceso"
+inputEditar.value=product.idProceso
+const inputModelo2=document.createElement('input')
+inputModelo2.type="hidden"
+inputModelo2.name="idModelo"
+inputModelo2.value=id
 const ButtonEditar=document.createElement('button')
 ButtonEditar.innerHTML="EDITAR"
 formularioEditar.appendChild(ButtonEditar)
 formularioEditar.appendChild(inputEditar)
+formularioEditar.appendChild(inputModelo2)
 tdButton.appendChild(formularioEditar)
 body.appendChild(tdButton)
 

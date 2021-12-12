@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<HTML>
+
+<head>
+    <title>WE ARE FIVE</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<!-- Header -->
+<header id="header">
+    <h1><a href="indexAdmin.html">WE ARE FIVE</a> &nbsp BIENVENIDO ADMIN</h1>
+    <nav id="nav">
+        <ul id="ulnav">
+        </ul>
+    </nav>
+</header>
+
+<section id="main" class="container">
+    <section class="box special">
+        <h1>VER PROCESOS DE MODELO DE ZAPATO</h1>
+        <h2 id="nombreProcesoH2"></h2>
+        <h2 id="costoTotalH2"></h2>
+        <body class="is-preload">
+
+            <div id="page-wrapper">
+                <form action="eliminar.html">
+                    <table id="bodyjs">
+                        <thead>
+                            <th>Costo_Total</th>
+                            <th>Nombre</th>
+                            <th>Detalle</th>
+                            <th>Materiales</th>
+                            <th>Acciones</th>
+                        </thead>
+                        <hr>
+
+                    </table>
+                    
+                </form>
+            </div>
+            <form action="agregarProceso.html">
+            <input type="hidden" id="agregarinput" name="idModelo">
+           <button onclick="idagregarProceso()">AGREGAR PROCESO</button>
+        </form>
+            <!-- Scripts -->
+            <script src="assets/js/host.js"></script>
+            <script src="assets/js/idurlproceso.js"></script>
+            <script src="assets/js/procesos.js"></script>
+            <script src="assets/js/headerAdmin.js"></script>
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.dropotron.min.js"></script>
+            <script src="assets/js/jquery.scrollex.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+            
+
+
+        </body>
+    </section>
+</section>
+
+</HTML>

@@ -2,7 +2,7 @@ const token= window.sessionStorage.getItem('access_token')
 const url= new URL(window.location.href);
 const id=url.searchParams.get("idModelo");
 const idProceso=url.searchParams.get("idProceso");
-fetch("http://"+host()+"/api/products/model/"+1+"/costs", {
+fetch("http://"+host()+"/api/products/model/"+id+"/costs", {
     method: 'GET',
     headers: {
       'Authorization':'Bearer '+token,

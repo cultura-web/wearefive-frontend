@@ -35,11 +35,7 @@
         <section id="main" class="container medium">
             <header>
                 <h2 style="color: white;">Editar Proceso</h2>
-<<<<<<< HEAD
-                <p  style="color: white;">Actualiza los datos para el proceso</p>
-=======
                 <p style="color: white;">Ingresa los nuevos datos para el proceso</p>
->>>>>>> 34a7e5ec0856cad31bf01fcf82f8ff02bf7df05d
             </header>
             <div class="boxRegistrarZapato">
                 <form method="post" id="registrarZapato">
@@ -48,23 +44,6 @@
                             <input type="text" name="nombre" id="nombre" value="nombre" placeholder="Nombre" />
                         </div>
                         <div class="col-12">
-<<<<<<< HEAD
-                            <textarea name="detalle" id="detalle" value="detalle" placeholder="Detalle" rows="6"></textarea>
-                        </div>
-                        <div class="col-6 col-12-mobilep">
-                            <select name="Material">
-                                <option value="value1"selected>Selecciona...</option>
-                                <option value="value2">--</option>
-                                <option value="value3">--</option>
-                              </select>
-                        </div>
-                        <div class="col-6 col-12-mobilep">
-                            <input type="number" name="Cantidad" id="cantidad" value="Cantidad"
-                                placeholder="Cantidad" />
-                        </div>
-                        <div class="col-12">
-                            <input id="registrarZapatoButton" type="submit" value="Registrar" onclick="editarProceso()"/>
-=======
                             <textarea name="detalle" id="detalle" placeholder="detalle" rows="6"></textarea>
                         </div>
                         <style>
@@ -77,15 +56,15 @@
                             }
                         </style>
 
-                        <div class=" col-12 clonar">
+                        <div class=" col-12 clonar casilla" name="">
                             <div class="col-6 col-12-mobilep ">
-                                <select type="text" class="form-control" name="nombre[]">
+                                <select type="text" class="form-control clonSelect" name="Select" id="materialCombo">
                                     <option value="value1" selected>Selecciona...</option>
                                     <option value="value2">--</option>
                                     <option value="value3">--</option>
                                 </select>
-                                <input type="number" name="Cantidad" id="Cantidad" value="Cantidad" placeholder="Cantidad">
-                                <span class="button1 puntero ocultar" style="background-color: red; color: white;">Eliminar</span>
+                                <input class="clonCantidad" type="number" name="Cantidad" id="Cantidad" value="Cantidad" placeholder="Cantidad">
+                                <br>
                             </div>
                         </div>
                         <div class="col-12 clonar" id="contenedor"></div>
@@ -93,31 +72,18 @@
                             <button class="button" style="background-color: green;" id="agregar">Agregar campo +</button>
                         </div>
                         <div class="col-12">
-                            <input id="registrarZapatoButton" type="submit" value="Actualizar" onclick="productPost()" />
->>>>>>> 34a7e5ec0856cad31bf01fcf82f8ff02bf7df05d
+                            <button class="button" style="background-color: green;" id="eliminar">Eliminar campo +</button>
+                        </div>
+                        <div class="col-12">
+  
+
                         </div>
                     </div>
                 </form>
             </div>
         </section>
+        <button class="button" style="background-color: green;" onclick="editarProceso()">editar</button>
         <!-- Footer -->
-<<<<<<< HEAD
-		<footer id="footer">
-			<ul class="icons">
-				<li><a href="https://www.facebook.com/"><img src="images/facebook.png"></a></li>
-
-				<li><a href="https://api.whatsapp.com/send?phone=0123456789"><img src="images/whatsapp.png"></a></li>
-			</ul>
-			<ul class="copyright">
-				<li>&copy; TODOS LOS DERECHOS RESERVADOS</li>
-				<li>Diseñado por <a href="#">CULTURA WEB</a></li>
-			</ul>
-		</footer>
-	</div>
-    </div>
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-=======
         <footer id="footer">
             <ul class="icons">
                 <li><a href="https://www.facebook.com/"><img src="images/facebook.png"></a></li>
@@ -133,41 +99,51 @@
     </div>
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/host.js"></script>
     <script src="assets/js/headerAdmin.js"></script>
->>>>>>> 34a7e5ec0856cad31bf01fcf82f8ff02bf7df05d
+    <script src="assets/js/materialCombo.js"></script>
     <script src="assets/js/jquery.dropotron.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
+    
     <script src="assets/js/main.js"></script>
-<<<<<<< HEAD
     <script src="assets/js/editarProceso.js"></script>
-=======
     <script>
         let agregar = document.getElementById('agregar');
+        let eliminar = document.getElementById('eliminar');
         let contenido = document.getElementById('contenedor');
-
+        let contador =1;
         agregar.addEventListener('click', e => {
             e.preventDefault();
 
             let clonado = document.querySelector('.clonar');
             let clon = clonado.cloneNode(true);
 
-            contenido.appendChild(clon).classList.remove('clonar');
+            
+            contador++;
+            let clonSelect= clon.querySelector('.clonSelect');
+            clonSelect.setAttribute("name","Select"+contador)
+            let clonCantidad= clon.querySelector('.clonCantidad');
+            clonCantidad.setAttribute("name","Cantidad"+contador)
 
-            let remover = contenido.lastChild.childNodes[1].querySelectorAll('span');
-            remover[0].classList.remove('ocultar');
+            clon.setAttribute("name","div"+contador)
+            contenido.appendChild(clon).classList.remove('clonar');
+            console.log(document.getElementsByClassName("casilla"));
         });
 
-        contenido.addEventListener('click', e => {
+        eliminar.addEventListener('click', e => {
             e.preventDefault();
-            if (e.target.classList.contains('puntero')) {
-                let contenedor = e.target.parentNode.parentNode;
-                contenedor.parentNode.removeChild(contenedor);
-            }
+            let casillas=document.getElementsByClassName("casilla").length;
+            if(casillas>1){
+let borrar= document.getElementsByName("div"+casillas)[0];
+               console.log(borrar);
+               borrar.parentNode.removeChild(borrar);
+               contador--;
+
+        }
         });
     </script>
->>>>>>> 34a7e5ec0856cad31bf01fcf82f8ff02bf7df05d
 </body>
 </html>

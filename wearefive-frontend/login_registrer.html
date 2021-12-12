@@ -31,7 +31,7 @@
             <!--Formulario de Login y registro-->
             <div class="contenedor__login-register">
                 <!--Login-->
-                <form id="entrarForm" class="formulario__login" method="post" onsubmit=catalogo.html>
+                <div id="entrarForm" class="formulario__login" method="post" >
                     <h2>Iniciar Sesión</h2>
                     <input name="username" id="username" type="text" placeholder="Usuario">
                     <input name="password" id="password" type="password" placeholder="Contraseña">
@@ -40,9 +40,9 @@
                         <button id="entrarbutton" type="submit"  onclick="login()" > Entrar Cliente</button>
                         <button id="entrarbuttonAdmin" type="submit"  onclick="loginAdmin()" > Admin Entrar</button>
                         <a href="indexadmin.html">admin</a>
-                </form>
+                </div>
                 <!--Register-->
-                <form id="registrerForm" class="formulario__register" method="post" >
+                <div id="registrerForm" class="formulario__register" method="post" >
                     <h2>Regístrarse</h2>
                     <input id="usernameR" name="username" type="text" placeholder="Nombre de Ususario">
                     <input id="contrasena" name="contrasena" type="password" placeholder="Contraseña">
@@ -52,7 +52,7 @@
                     <input id="direccion" name="direccion" type="text" placeholder="Direccion">
                     <input id="celular" name="celular" type="text" placeholder="Celular">
                     <button id="registrerbutton" type="submit" onclick="registrar()">Regístrarse</button>
-                </form>
+                </div>
             </div>
         </div>
     </main>

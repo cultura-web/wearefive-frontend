@@ -21,6 +21,7 @@ fetch("http://"+host()+"/api/materiales/list",{
         //tdNombre
     const Nombre=document.createElement('option')
     Nombre.innerHTML=product.nombre
+    Nombre.dataset.idMaterial=product.idMaterial
     table.appendChild(Nombre)
 
     
