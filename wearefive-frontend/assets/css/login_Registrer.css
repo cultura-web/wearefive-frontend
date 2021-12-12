@@ -132,7 +132,43 @@ main{
  
 }
 
+.contenedor__login-register div{
+    width: 100%;
+    padding: 80px 20px;
+    background: white;
+    position: absolute;
+    border-radius: 20px;
+}
 
+.contenedor__login-register div h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #06345E;
+}
+
+.contenedor__login-register div input{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #F2F2F2;
+    font-size: 16px;
+    outline: none;
+}
+
+.contenedor__login-register div button{
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: #06345E;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+ 
+}
 
 
 .formulario__login{

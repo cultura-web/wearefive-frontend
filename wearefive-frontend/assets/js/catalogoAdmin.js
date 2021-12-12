@@ -56,7 +56,7 @@ fetch("http://"+host()+"/api/products/list")
     //datos que configuramos del objeto html creado por medio del const, var, let(como vean) que lo guarda
     //estos datos luego se usan en este caso para pasar a detalle.html por eso el metodo "get" y action que redirigira luego por un boton a "detalle.html"
     content.className="post";
-    content.action="detalle.html"
+    content.action="detalleAdmin.html"
     content.method="get"
 
     //data set permite guardar mas datos en html como si fueran variables, en este caso data-category es lo mismo en javascript que dataset.category
@@ -89,8 +89,17 @@ fetch("http://"+host()+"/api/products/list")
     const button=document.createElement('button')
     button.innerHTML="Leer más"
  
+    const contentproceso=document.createElement('form')
 
-
+    contentproceso.className="post";
+    contentproceso.action="procesos.html"
+    contentproceso.method="get"
+    const inputproceso=document.createElement('input')
+    inputproceso.type="hidden"
+    inputproceso.name="idModelo"
+    inputproceso.value=product.id
+    const buttonproceso=document.createElement('button')
+    buttonproceso.innerHTML="Gestionar proceso"
 
     //se encierran los objetos unos dentro de otros dependiendo del orden
     div_img.appendChild(img)
@@ -103,7 +112,9 @@ fetch("http://"+host()+"/api/products/list")
     content.appendChild(span)
     content.appendChild(ul_li)
     content.appendChild(button)
-
+    content.appendChild(contentproceso)
+    contentproceso.appendChild(inputproceso)
+    contentproceso.appendChild(buttonproceso)
 
     //la base que aparece en html contiene todo para que aparesca en el html
     div_base.appendChild(content)
