@@ -2,8 +2,7 @@ async  function agregarProceso(){
 
         const url= new URL(window.location.href);
         const id=url.searchParams.get("idModelo");
-        const urlinputP=document.getElementById("agregarinput")
-        urlinputP.value=id
+
           const nombre= document.getElementById("nombre").value;
         const detalle=  document.getElementById("detalle").value;
     
@@ -57,9 +56,9 @@ async  function agregarProceso(){
                  
              })
              });
-             window.location.href = 'procesos.html';
+             window.location.href = 'procesos.html?idModelo='+id;
            } catch(error) {
-                window.location.href = 'procesos.html';
+                window.location.href = 'procesos.html?idModelo='+id;
            }
-            window.location.href = 'procesos.html';
+            window.location.href = 'procesos.html?idModelo='+id;
           };
