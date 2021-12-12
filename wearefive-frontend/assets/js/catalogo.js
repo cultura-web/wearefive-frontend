@@ -120,5 +120,8 @@ fetch("http://"+host()+"/api/products/list")
     div_base.appendChild(content)
     }
 
-    //fin
+    if (!response.ok) throw Error(response.status);
+
+    return response;
 })
+.catch(error => console.log(error)); 
