@@ -89,4 +89,7 @@ body.appendChild(tdcosto_total)
 
 
 }
-    })
+if (!response.ok) throw Error(response.status);
+
+})
+.catch(error => console.log(error)); 
