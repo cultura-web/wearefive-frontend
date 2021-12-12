@@ -37,7 +37,7 @@ try{
     window.location.href = 'catalogoAdmin.html';
     
    
-    if($precioUnitario < $costoTotal) throw new SyntaxError("El precio unitario no puede ser mayor al precio total")
+   
     if(!$nombre) throw new SyntaxError("Nombre es obligatorio para agregar un modelo de zapato")
     if(!$descripcion) throw new SyntaxError("Descripcion es obligatorio para agregar un modelo de zapato")
     if(!$color) throw new SyntaxError("Color es obligatorio para agregar un modelo de zapato")
