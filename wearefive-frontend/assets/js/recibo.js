@@ -20,12 +20,12 @@ fetch("http://"+host()+"/api/products/recibo/",{
     const div_base= document.getElementById('product')
 
 
-    for (const product of data.modeloZapatos ){
+    for (const product of data.modelosZapatos ){
 
 
 
     //data set permite guardar mas datos en html como si fueran variables, en este caso data-category es lo mismo en javascript que dataset.category
-    //product guarda como ven al comienzo del for la iteracion del data.modeloZapatos por lo que dentro estaran los datos de cada zapato guardados en las mismas variables
+    //product guarda como ven al comienzo del for la iteracion del data.modelosZapatos por lo que dentro estaran los datos de cada zapato guardados en las mismas variables
     //que los payloads o body del post man o documento ingenieril
     content.dataset.category= product.categoria;
 
