@@ -102,6 +102,23 @@ fetch("http://"+host()+"/api/products/list")
     const buttonproceso=document.createElement('button')
     buttonproceso.innerHTML="Gestionar proceso"
 
+        
+    const contentS=document.createElement('form')
+
+    contentS.className="post";
+    contentS.action="Stock.html"
+    contentS.method="get"
+    const inputS=document.createElement('input')
+    inputS.type="hidden"
+    inputS.name="idModelo"
+    inputS.value=product.id
+    const buttonS=document.createElement('button')
+    buttonS.innerHTML="Gestionar stock"
+
+    content.appendChild(contentS)
+    contentS.appendChild(inputS)
+    contentS.appendChild(buttonS)
+
     //se encierran los objetos unos dentro de otros dependiendo del orden
     div_img.appendChild(img)
     ul_li.appendChild(li)

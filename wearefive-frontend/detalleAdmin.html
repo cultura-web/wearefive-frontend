@@ -6,7 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" href="assets/css/blog.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
+
 <body class="is-preload">
 	<div id="page-wrapper">
 		<!-- Header -->
@@ -34,8 +36,55 @@
 		</header>
 		<section id="main" class="container">
 			<section class="box special">
-				<span class="image featured">
-					<img id="imgjs" src="https://i.ibb.co/gt5dQyh/2-2-nascar.jpg" alt="" /></span>
+				<div>
+					<link rel="stylesheet" href="assets/css/carrusel.css">
+					<!--image slider start-->
+					<div class="slider">
+						<div class="slides">
+							<!--radio buttons start-->.
+							<input type="radio" name="radio-btn" id="radio1">
+							<input type="radio" name="radio-btn" id="radio2">
+							<input type="radio" name="radio-btn" id="radio3">
+							<input type="radio" name="radio-btn" id="radio4">
+							<!--radio buttons end-->
+							<!--slide images start-->
+							<div class="slide first">
+								<img src="https://i.ibb.co/2v4fFhk/3-1-Augusta.png" alt="">
+							</div>
+							<div class="slide">
+								<img src="https://i.ibb.co/gt5dQyh/2-2-nascar.jpg" alt="">
+							</div>
+							<div class="slide">
+								<img src="https://i.ibb.co/KNpDzBQ/4-1-thegrey.png"alt="">
+							</div>
+							<div class="slide">
+								<img src="https://i.ibb.co/3phtVMB/5-1-lucky.png" alt="">
+							</div>
+							<!--slide images end-->
+							<!--automatic navigation start-->
+							<div>
+
+							</div>
+							<!--automatic navigation end-->
+						</div>
+						<!--manual navigation start-->
+						<br><br>
+						<div class="navigation-manual">
+							<label for="radio1" class="manual-btn"
+								style="background-color: green; color: white;">VERDE</label>
+							<label for="radio2" class="manual-btn"
+								style="background-color: white; color: black;">BLANCO</label>
+							<label for="radio3" class="manual-btn"
+								style="background-color: black; color: white;">NEGRO</label>
+							<label for="radio4" class="manual-btn"
+								style="background-color: yellow; color: black;">AMARILLO</label>
+						</div>
+						<!--manual navigation end-->
+					</div>
+				</div>
+			</section>
+
+			<section class="box special">
 				<div class="col-12">
 					<select name="color" id="color">
 						<option id="colorjs" value="">- COLOR -</option>
@@ -75,17 +124,13 @@
 							<td id="descuentojs">%-</td>
 						</tr>
 					</table>
-					<select name="talla" id="talla">
-		
-					</select>
-					<button onclick="comprar()">BUY</button>
 					<!-- SE TIENE QUE HACER UN JS QUE HAGA LOS LLAMADOS DE LOS DETALLES EN LOS INPUTS DEL FORMULARIO
 					DE EDITAR DETALLE-->
 					<a href="editar-zapato.html"> editar zapato</a>
 					<input type="submit" value="Editar detalles">
 					&nbsp;
 					<input style="background-color: red;" type="submit" value="Borrar zapato">
-                    <!---->
+					<!---->
 					<section id="main" class="container medium">
 						<section id="one">
 							<section id="main" class="container medium">
@@ -116,7 +161,6 @@
 													<a href="catalogo.html" class="button">Regresar</a>
 												</ul>
 											</div>
-											
 										</div>
 									</form>
 								</div>
@@ -138,6 +182,8 @@
 			</ul>
 		</footer>
 	</div>
+
+
 	<!-- Scripts -->
 	<script src="assets/js/host.js"></script>
 	<script src="assets/js/headerAdmin.js"></script>
