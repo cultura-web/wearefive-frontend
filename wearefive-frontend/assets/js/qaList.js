@@ -1,5 +1,5 @@
 
-
+function qa(){
 fetch("http://"+host()+"/api/qa")
 .then(response => response.ok ? Promise.resolve(response) : Promise.reject(response))
 .then(response => response.json())
@@ -31,4 +31,5 @@ fetch("http://"+host()+"/api/qa")
     //fin
 })
 
-
+}
+qa()

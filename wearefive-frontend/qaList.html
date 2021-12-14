@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" href="assets/css/blog.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
 </head>
 <body class="is-preload">
 	<div id="page-wrapper">
@@ -15,88 +16,41 @@
 		<header id="header">
 			<h1><a href="indexAdmin.html">WE ARE FIVE</a> &nbsp BIENVENIDO ADMIN</h1>
 			<nav id="nav">
-				<ul>
-					<li><a href="index.html">Inicio</a></li>
-					<li><a href="catalogo.html">Catalogo</a></li>
-					<li><a href="#one">Contactanos</a></li>
-					<li><a href="carrito.html">Carrito</a></li>
-					<li><a href="qaList.html">Foro</a></li>
-					<li><a href="Login_registrer.html" class="button">Iniciar Sesión</a></li>
-					<li id="ulnav"></li>
+				<ul id="ulnav">
+
 				</ul>
 			</nav>
-		</header>
+		</header> 
+	<style>
+		.customers {
+			font-family: Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+		}
 
+		
+		td {
+			border: 1px solid #ddd;
+			padding: 8px;
+		}
+
+	
+	</style>
 		<section id="main" class="container">
 			<section class="box special">
 				<header class="major">
 					<h2>FORO</h2>
 					<br>
 
-					<style>
-						#customers {
-							font-family: Arial, Helvetica, sans-serif;
-							border-collapse: collapse;
-							width: 100%;
-						}
 
-						#customers td,
-						#customers th {
-							border: 1px solid #ddd;
-							padding: 8px;
-						}
 
-						#customers tr:nth-child(even) {
-							background-color: #f2f2f2;
-						}
+					<h1>preguntas frecuentes de usuarios</h1>
 
-						#customers tr:hover {
-							background-color: #ddd;
-						}
-
-						#customers th {
-							padding-top: 12px;
-							padding-bottom: 12px;
-							text-align: left;
-							background-color: #04AA6D;
-							color: white;
-						}
-					</style>
-
-					<h1>comentario de usuarios</h1>
-
-					<table id="customers">
-						<tr>
-							<th>Usuario</th>
-							<th>Comentario</th>
-							<th>Acciones</th>
-						</tr>
-						<tr>
-							<td>Alfreds Futterkiste</td>
-							<td>hola que tal un gusto el zapato me gustó</td>
-							<td><a href="#">Responder</a>
-							</td>
-						</tr>
-						<tr>
-							<td>Berglunds snabbköp</td>
-							<td>que crack de zapato maquina</td>
-							<td><a href="#">Responder</a>
-							</td>
-						</tr>
-						<tr>
-							<td>Centro comercial Moctezuma</td>
-							<td>Hola soy nuevo que se hace aqui</td>
-							<td><a href="#">Responder</a>
-							</td>
-						</tr>
-						<tr>
-							<td>Ernst Handel</td>
-							<td>buenas vendo tamales</td>
-							<td><a href="#">Responder</a>
-							</td>
-						</tr>
+					<table id="bodyjs" class="customers">
+				
+					
 					</table>
-					<a href="agregarProceso.html"><button>Agregar Proceso</button></a>
+					
 			</section>
 		</section>
 
@@ -127,6 +81,7 @@
 	<script src="assets/js/main.js"></script>
 
 	<script src="assets/js/qaList.js"></script>
+
 </body>
 
 </HTML>
