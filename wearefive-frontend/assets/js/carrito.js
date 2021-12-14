@@ -5,7 +5,7 @@ fetch("http://"+host()+"/api/products/list")
 
     const table= document.getElementById('bodyjs')
     
-    for (const product of data.modeloZapatos ){
+    for (const product of data.modelosZapatos ){
 
         const body= document.createElement('tbody')
         body.className="post";
@@ -31,9 +31,9 @@ fetch("http://"+host()+"/api/products/list")
 
     
     const formulario = document.createElement('form')
-    formulario.action = 'eliminar.html'
+    formulario.action = 'eliminarZaparo.html'
     const be = document.createElement('input')
-    be.innerHTML="Eliminar"
+    be.value="Eliminar"
     be.type = "submit"
     const input=document.createElement('input')
     input.type="hidden"
@@ -46,7 +46,7 @@ fetch("http://"+host()+"/api/products/list")
     formulario2.action = 'editarZapato.html'
 
     const be2 = document.createElement('input')
-    be2.innerHTML="Editar"
+    be2.value="Editar"
     be2.type = "submit"
 
     const input2=document.createElement('input')

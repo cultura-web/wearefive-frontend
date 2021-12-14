@@ -5,7 +5,7 @@ fetch("http://"+host()+"/api/carrito/list")
 
     const table= document.getElementById('bodyjs')
     
-    for (const product of data.modeloZapatos ){
+    for (const product of data.modelosZapatos ){
 
         const body= document.createElement('tbody')
         body.className="post";

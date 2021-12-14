@@ -21,14 +21,32 @@ const idModelo = urlModelo.searchParams.get("idModelo");
       'Authorization':'Bearer '+token,
       'Accept': 'application/json',
       'Content-Type': 'application/json'
-     
-    }
+         }
 });
     const json = await response.json()
    
    
 }
-function comprar(){
-    
+async function comprar(){
+    const token= window.sessionStorage.getItem('access_token')
+const urlModelo= new URL(window.location.href);
+const idModelo = urlModelo.searchParams.get("idModelo");
+    console.log(parseJwt(token).sub) 
+
+    const talla=window.sessionStorage.getItem('talla')
+    alert("se esta generando su compra espere redireccion y el recibo en su correo")
+    const response=await fetch("http://"+host()+"/api/cart/"+idModelo+"/"+talla+"/buy",{
+    method: 'GET',
+    headers: {
+      'Authorization':'Bearer '+token,
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+         }
+});
+
+    const json = await response.json()
+
+    window.location.href = 'catalogo.html';
+   
 }
 datos()

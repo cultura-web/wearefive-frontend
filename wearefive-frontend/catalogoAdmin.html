@@ -1,37 +1,40 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>WE ARE FIVE</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/blog.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	</head>
-	<body class="is-preload">
-		<div id="page-wrapper">
-			<!-- Header -->
-			<header id="header">
-				<h1><a href="indexAdmin.html">WE ARE FIVE</a> &nbsp BIENVENIDO ADMIN</h1>
-                <nav id="nav">
-                    <ul>
-                        <li>
-                            <a href="#">OPCIONES</a>
-                            <ul style="background-color: rgba(32, 54, 80, 1);">
-                                <li style="color: white;"><a href="registrar-zapato.html">REGISTRAR ZAPATO</a></li>
-                                <li style="color: white;"><a href="agregarProceso.html">AGREGAR PROCESO</a></li>
-                                <li style="color: white;"><a href="agregarMaterial.html">AGREGAR MATERIAL</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="catalogoAdmin.html">CATALOGO ADMIN</a></li>
-                        <li><a href="materiales.html">MATERIALES</a></li>
-                        <li><a href="qa.html">FORO</a></li>
-						<li><a href="carrito.html">CARRITO</a></li>
-                        <li><a href="indexadmin.html">INICIO</a></li>
-                        <li><a href="index.html" class="button">Cerrar Sesión</a></li>
-                        <li id="ulnav"></li>
-                    </ul>
-                </nav>
+
+<head>
+	<title>WE ARE FIVE</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/blog.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="indexAdmin.html">WE ARE FIVE</a> &nbsp BIENVENIDO ADMIN</h1>
+			<nav id="nav">
+				<ul>
+					<li>
+						<a href="#">OPCIONES</a>
+						<ul style="background-color: rgba(32, 54, 80, 1);">
+							<li style="color: white;"><a href="carrito.html">GESTIONAR ZAPATOS</a></li>
+							<li style="color: white;"><a href="materiales.html">GESTIONAR MATERIAL</a></li>
+							<li style="color: white;"><a href="procesos.html">GESTIONAR PROCESOS</a></li>
+							<li style="color: white;"><a href="Stock.html">INVENTARIO</a></li>
+						</ul>
+					</li>
+					<li><a href="catalogoAdmin.html">CATALOGO ADMIN</a></li>
+					<li><a href="materiales.html">MATERIALES</a></li>
+					<li><a href="qa.html">FORO</a></li>
+					<li><a href="carrito.html">CARRITO</a></li>
+					<li><a href="indexadmin.html">INICIO</a></li>
+					<li><a href="index.html" class="button">Cerrar Sesión</a></li>
+					<li id="ulnav"></li>
+				</ul>
+			</nav>
 		</header>
 		<div class="container-post">
 			<br><br>
@@ -52,68 +55,60 @@
 				<label for="ANIME">ANIME</label>
 				<label for="ESPECIALES">ESPECIALES</label>
 			</div>
+			<div class="container-post">
+
+				<section id="main" class="container" style="width:50%">
+					<section class="box special">
+
+						<div id="entrarForm" class="formulario__login" method="post">
+							<h2>FORMULARIO DE COMPRAS</h2>
+							<h2>id del zapato</h2>
+							<input name="IDZAPATO" id="IDZAPATO" type="IDZAPATO" placeholder="IDZAPATO">
+							<h2>talla</h2>
+							<input name="TALLA" id="TALLA" type="TALLA" placeholder="TALLA">
+
+							<button onclick="comprar()">VALIDAR COMPRAR</button>
+						</div>
+
+					</section>
+				</section>
+			</div>
 			<div class="posts" id="product">
 				
 			</div>
 		</div>
-				<section id="one">
-					<section id="main" class="container medium">
-						<div class="box">
-							<h2>Contactanos</h2>
-							<p>Tell us what you think about our little operation.</p>
-							<form method="post" action="#">
-								<div class="row gtr-50 gtr-uniform">
-									<div class="col-6 col-12-mobilep">
-										<input type="text" name="name" id="name" value="" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-mobilep">
-										<input type="email" name="email" id="email" value="" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<input type="text" name="subject" id="subject" value="" placeholder="Subject" />
-									</div>
-									<div class="col-12">
-										<textarea name="message" id="message" placeholder="Enter your message"
-											rows="6"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions special">
-											<li><input type="submit" value="Send Message" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-							<table class="table">
-								<thead></thead>
-								<tbody></tbody>
-							</table>
-						</div>
-					</section>
-				</section>
-				<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<li><a href="https://www.facebook.com/"><img src="images/facebook.png"></a></li>
-						<li><a href="https://api.whatsapp.com/send?phone=0123456789"><img src="images/whatsapp.png"></a>
-						</li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; TODOS LOS DERECHOS RESERVADOS</li>
-						<li>Diseñado por <a href="#">CULTURA WEB</a></li>
-					</ul>
-				</footer>
-			</div>
-			<!-- Scripts -->
-			<script src="assets/js/host.js"></script>
-			<script src="assets/js/headerAdmin.js"></script>
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/catalogoAdmin.js"></script>
-		</body>
+		<section id="one">
+			<section id="main" class="container medium">
+				
+				
+			</section>
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<ul class="icons">
+				<li><a href="https://www.facebook.com/"><img src="images/facebook.png"></a></li>
+				<li><a href="https://api.whatsapp.com/send?phone=0123456789"><img src="images/whatsapp.png"></a>
+				</li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; TODOS LOS DERECHOS RESERVADOS</li>
+				<li>Diseñado por <a href="#">CULTURA WEB</a></li>
+			</ul>
+		</footer>
+	</div>
+	<!-- Scripts -->
+	<script src="assets/js/host.js"></script>
+	<script src="assets/js/headerAdmin.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/catalogoAdmin.js"></script>
+	<script src="assets/js/validarcompra.js"></script>
+</body>
 
 </html>
