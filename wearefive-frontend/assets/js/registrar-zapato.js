@@ -48,7 +48,7 @@ try{
     if(!$descuento) throw new SyntaxError("Descuento es obligatorio para agregar un modelo de zapato")
 }
 catch(error){
-  alert(error)
+  //alert(error)
   window.location.href = 'registrar-zapato.html';
   console.log(error)
 }
