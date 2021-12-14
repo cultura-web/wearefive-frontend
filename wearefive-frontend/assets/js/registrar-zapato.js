@@ -36,8 +36,8 @@ try{
     const content = await rawResponse.json();
     window.location.href = 'catalogoAdmin.html';
     
-   
-   
+    //if(!rawResponse.ok ) throw Error(response.statusText);
+    if($precioUnitario > $costoTotal) throw new SyntaxError("El precio unitario no puede ser mayor al precio total")
     if(!$nombre) throw new SyntaxError("Nombre es obligatorio para agregar un modelo de zapato")
     if(!$descripcion) throw new SyntaxError("Descripcion es obligatorio para agregar un modelo de zapato")
     if(!$color) throw new SyntaxError("Color es obligatorio para agregar un modelo de zapato")
@@ -52,7 +52,7 @@ catch(error){
   window.location.href = 'registrar-zapato.html';
   console.log(error)
 }
-
+window.location.href = 'registrar-zapato.html';
 }
 
 
