@@ -15,20 +15,22 @@
         </ul>
     </nav>
 </header>
-
+<body class="is-preload">
 <section id="main" class="container">
     <section class="box special">
-        <h1>VER Stock</h1>
-        <h2 id="idModelo"></h2>
-        <h2 id="nombreModelo"></h2>
+  
 
 
-        <body class="is-preload">
+        <section id="main" class="container">
 
             <div id="page-wrapper">
-
+                <h1>VER Stock</h1>
+                <h2 id="idModelo"></h2>
+                <h2 id="nombreModelo"></h2>
+                
                 <hr>
                 <H2>INVENTARIO</H2>
+                
                 <div method="post" id="editarStock">
 
                     <table id="bodyjs">
@@ -45,6 +47,26 @@
                     </table>
 
                     <div id='foo'></div>
+                   
+                    
+                        <div class="contenedor__login-register">
+        
+         
+        
+                                    <div id="entrarForm" class="formulario__login" method="post">
+                                        <h2>FORMULARIO DE COMPRAS</h2>
+                                        <h2>id del zapato</h2>
+                                        <input name="IDZAPATO" id="IDZAPATO" type="IDZAPATO" placeholder="IDZAPATO">
+                                        <h2>talla</h2>
+                                        <input name="TALLA" id="TALLA" type="TALLA" placeholder="TALLA">
+                                        <br>
+                                        <button onclick="comprar()">VALIDAR COMPRAR</button>
+                                    </div>
+        
+        
+                        </div>
+
+                        <hr>
 
                     <h2>GESTIONAR INVENTARIO</h2>
                     <div class=" col-12 clonar casilla" name="">
@@ -60,30 +82,25 @@
 
                     <div class="col-12 clonar" id="contenedor"></div>
                     <div class="col-12">
+
+                        <button class="button" style="background-color: green;" id="eliminar"
+                            onclick="editar()">editar</button>
+                    </div>
+                    <div class="col-12">
                         <button class="button" style="background-color: green;" id="agregar">Agregar campo +</button>
                     </div>
                     <div class="col-12">
                         <button class="button" style="background-color: green;" id="eliminar">Eliminar campo +</button>
                     </div>
-                    <div class="col-12">
 
-                        <button class="button" style="background-color: green;" id="eliminar"
-                            onclick="editar()">editar</button>
-                    </div>
 
                 </div>
 
             </div>
+        </section>
+        </section>
+    </section>
             <script src="assets/js/host.js"></script>
-            <script src="assets/js/stock.js"></script>
-            <script src="assets/js/stockeditar.js"></script>
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/jquery.dropotron.min.js"></script>
-            <!-- Scripts 
-            
-            
-           
-            <script src="assets/js/headerAdmin.js"></script>
             <script src="assets/js/jquery.min.js"></script>
             <script src="assets/js/jquery.dropotron.min.js"></script>
             <script src="assets/js/jquery.scrollex.min.js"></script>
@@ -92,9 +109,7 @@
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
             <script src="assets/js/stock.js"></script>
-           
-            
-        -->
+            <script src="assets/js/stockeditar.js"></script>
             <script>
                 let agregar = document.getElementById('agregar');
                 let eliminar = document.getElementById('eliminar');
@@ -132,7 +147,6 @@
             </script>
 
         </body>
-    </section>
-</section>
+
 
 </HTML>
