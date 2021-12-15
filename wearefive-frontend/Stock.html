@@ -25,6 +25,7 @@
             <li><a href="qa.html">FORO</a></li>
             <li><a href="carrito.html">CARRITO</a></li>
             <li><a href="indexadmin.html">INICIO</a></li>
+        <li><a href="Login_registrer.html" class="button" id="usuario">Iniciar Sesión</a></li>
         </ul>
     </nav>
 </header>
@@ -108,6 +109,8 @@
         </section>
     </section>
             <script src="assets/js/host.js"></script>
+            <script src="assets/js/parseToken.js"></script>
+            <script src="assets/js/headerAdmin.js"></script>
             <script src="assets/js/jquery.min.js"></script>
             <script src="assets/js/jquery.dropotron.min.js"></script>
             <script src="assets/js/jquery.scrollex.min.js"></script>
@@ -124,6 +127,7 @@
                 let contenido = document.getElementById('contenedor');
                 let contador = 2;
                 document.getElementsByName("Talla")[0].value=37;
+                document.getElementsByName("Cantidad")[0].value=0;
                 for (let index = 0; contador < 8; contador++) {
                         let clonado = document.querySelector('.clonar');
                     let clon = clonado.cloneNode(true);
@@ -133,7 +137,7 @@
                     clonSelect.value=36+contador;
                     let clonCantidad = clon.querySelector('.clonCantidad');
                     clonCantidad.setAttribute("name", "Cantidad" + contador)
-
+                    clonCantidad.value=0;
                     clon.setAttribute("name", "div" + contador)
                     contenido.appendChild(clon).classList.remove('clonar');
 
