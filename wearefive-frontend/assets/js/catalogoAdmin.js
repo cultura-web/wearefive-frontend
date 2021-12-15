@@ -115,7 +115,7 @@ fetch("http://"+host()+"/api/products/list")
     const buttonS=document.createElement('button')
     buttonS.innerHTML="Gestionar stock"
 
-    content.appendChild(contentS)
+   
     contentS.appendChild(inputS)
     contentS.appendChild(buttonS)
 
@@ -133,7 +133,7 @@ fetch("http://"+host()+"/api/products/list")
     content.appendChild(contentproceso)
     contentproceso.appendChild(inputproceso)
     contentproceso.appendChild(buttonproceso)
-
+    content.appendChild(contentS)
     //la base que aparece en html contiene todo para que aparesca en el html
     div_base.appendChild(content)
     }

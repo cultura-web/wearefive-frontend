@@ -18,13 +18,13 @@ try{
       
     });
     const content = await rawResponse.json();
-    window.location.href = 'qa.html';
+    window.location.href = 'qaListAdmin.html';
     console.log(content);
     
 
 }
  catch(error){
-  window.location.href = 'qa.html';
+  window.location.href = 'qaListAdmin.html';
 }
 }
 

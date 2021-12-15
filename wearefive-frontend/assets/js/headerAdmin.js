@@ -1,6 +1,6 @@
 const ul = document.getElementById("ulnav")
-
 /** 
+
 const liopciones=document.createElement("li")
 const aopciones=document.createElement("a")
 aopciones.href="#"
@@ -32,7 +32,7 @@ const liqa=document.createElement("li")
 const aqa=document.createElement("a")
 liqa.style="color:white;"
 aqa.innerText="GESTIONAR QA"
-aqa.href="qa.html"
+aqa.href="qaListAdmin.html"
 liqa.appendChild(aqa)
 ulopciones.appendChild(liqa)
 
@@ -59,7 +59,7 @@ amaterial.innerText="MATERIALES"
 amaterial.href="materiales.html"
 limaterial.appendChild(amaterial)
 ul.appendChild(limaterial)
-
+*/
 
 const lilogin=document.createElement("li")
 const alogin=document.createElement("button")
@@ -88,4 +88,3 @@ formularioB.appendChild(buttonBuscar)
 libuscar.appendChild(formularioB)
 ul.appendChild(libuscar)
 
-*/
