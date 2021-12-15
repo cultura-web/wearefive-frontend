@@ -103,3 +103,4 @@ formularioB.appendChild(buscarZapato)
 formularioB.appendChild(buttonBuscar)
 libuscar.appendChild(formularioB)
 ul.appendChild(libuscar)
+

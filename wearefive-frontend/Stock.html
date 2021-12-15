@@ -8,27 +8,29 @@
     <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <!-- Header -->
-<header id="header">
-    <h1><a href="indexAdmin.html">WE ARE FIVE</a> &nbsp BIENVENIDO ADMIN</h1>
-    <nav id="nav">
-        <ul id="ulnav">
-            <li>
-                <a href="#">OPCIONES</a>
-                <ul style="background-color: rgba(32, 54, 80, 1);">
-                    <li style="color: white;"><a href="registrar-zapato.html">REGISTRAR ZAPATO</a></li>
-                    <li style="color: white;"><a href="agregarProceso.html">AGREGAR PROCESO</a></li>
-                    <li style="color: white;"><a href="agregarMaterial.html">AGREGAR MATERIAL</a></li>
-                </ul>
-            </li>
-            <li><a href="catalogoAdmin.html">CATALOGO ADMIN</a></li>
-            <li><a href="materiales.html">MATERIALES</a></li>
-            <li><a href="qa.html">FORO</a></li>
-            <li><a href="carrito.html">CARRITO</a></li>
-            <li><a href="indexadmin.html">INICIO</a></li>
-        <li><a href="Login_registrer.html" class="button" id="usuario">Iniciar Sesión</a></li>
-        </ul>
-    </nav>
-</header>
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="indexAdmin.html">WE ARE FIVE</a> &nbsp BIENVENIDO ADMIN</h1>
+			<nav id="nav">
+				<ul id="ulnav">
+
+					<li>
+						<a href="#">OPCIONES</a>
+						<ul style="background-color: rgba(32, 54, 80, 1);">
+							<li style="color: white;"><a href="carrito.html">GESTIONAR ZAPATOS</a></li>
+							<li style="color: white;"><a href="materiales.html">GESTIONAR MATERIAL</a></li>
+							<li style="color: white;"><a href="procesos.html">GESTIONAR PROCESOS</a></li>
+							<li style="color: white;"><a href="Stock.html">INVENTARIO</a></li>
+						</ul>
+					</li>
+					<li><a href="catalogoAdmin.html">CATALOGO ADMIN</a></li>
+					<li><a href="qa.html">FORO</a></li>
+					<li><a href="indexadmin.html">INICIO</a></li>
+                    <li><a href="Login_registrer.html" class="button" id="usuario">Iniciar Sesión</a></li>
+				</ul>
+			</nav>
+		</header>
+
 <body class="is-preload">
 <section id="main" class="container">
     <section class="box special">
@@ -80,25 +82,24 @@
                         </div>
 
                         <hr>
-
-                    <h2>GESTIONAR INVENTARIO</h2>
-                    <div class=" col-12 clonar casilla" name="">
-                        <div class="col-6 col-12-mobilep ">
-
-                            <input class="clonCantidad" type="number" name="Cantidad" id="Cantidad" value="Cantidad"
-                                placeholder="Cantidad">
-                            <input class="clonTalla" type="number" name="Talla" id="Talla" value="Talla"
-                                placeholder="Talla" >
-                            <br>
+                        <h2>GESTIONAR INVENTARIO</h2>
+                        <div class=" col-12 clonar casilla" name="">
+                            <div class="col-6 col-12-mobilep ">
+    
+                                <input class="clonCantidad" type="number" name="Cantidad" id="Cantidad" value="Cantidad"
+                                    placeholder="Cantidad">
+                                <input class="clonTalla" type="number" name="Talla" id="Talla" value="Talla"
+                                    placeholder="Talla" >
+                                <br>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="col-12 clonar" id="contenedor"></div>
-                    <div class="col-12">
-
-                        <button class="button" style="background-color: green;" 
-                            onclick="editar()">editar</button>
-                    </div>
+    
+                        <div class="col-12 clonar" id="contenedor"></div>
+                        <div class="col-12">
+    
+                            <button class="button" style="background-color: green;" 
+                                onclick="editar()">editar</button>
+                        </div>
                   
 
 

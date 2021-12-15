@@ -148,7 +148,7 @@ input[type="radio"]{
     margin-left: 20px;
     padding: 10px 50px;
     font-size: 16px;
-    background: #46a2fd;
+    background: #ff3c3c;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -182,7 +182,7 @@ input[type="radio"]{
 [value="NIÑA"]:checked ~ .container-category [for="NIÑA"],
 [value="ANIME"]:checked ~ .container-category [for="ANIME"],
 [value="ESPECIALES"]:checked ~ .container-category [for="ESPECIALES"]{
-    background: #46a2fd;
+    background: #ff4747;
     color: #fff;
 }
 
