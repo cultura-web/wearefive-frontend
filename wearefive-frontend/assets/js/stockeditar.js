@@ -1,3 +1,6 @@
+
+
+
 async function editar() {
     const url = new URL(window.location.href);
     const id = url.searchParams.get("idModelo");
@@ -17,7 +20,9 @@ async function editar() {
     let casillas=document.getElementsByClassName("casilla").length;
     for (let index = 2; index <= casillas; index++) {
       const talla= document.getElementsByName("Talla"+index )[0].value;
+      console.log(talla)
       const cantidad = document.getElementsByName("Cantidad"+index )[0].value;
+      console.log(cantidad)
       var obj = {
         "cantidad":cantidad,
         "talla":talla

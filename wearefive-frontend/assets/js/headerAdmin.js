@@ -1,5 +1,5 @@
 const ul = document.getElementById("ulnav")
-
+/** 
 
 const liopciones=document.createElement("li")
 const aopciones=document.createElement("a")
@@ -59,7 +59,7 @@ amaterial.innerText="MATERIALES"
 amaterial.href="materiales.html"
 limaterial.appendChild(amaterial)
 ul.appendChild(limaterial)
-
+*/
 
 const lilogin=document.createElement("li")
 const alogin=document.createElement("button")

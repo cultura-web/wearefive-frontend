@@ -12,6 +12,19 @@
     <h1><a href="indexAdmin.html">WE ARE FIVE</a> &nbsp BIENVENIDO ADMIN</h1>
     <nav id="nav">
         <ul id="ulnav">
+            <li>
+                <a href="#">OPCIONES</a>
+                <ul style="background-color: rgba(32, 54, 80, 1);">
+                    <li style="color: white;"><a href="registrar-zapato.html">REGISTRAR ZAPATO</a></li>
+                    <li style="color: white;"><a href="agregarProceso.html">AGREGAR PROCESO</a></li>
+                    <li style="color: white;"><a href="agregarMaterial.html">AGREGAR MATERIAL</a></li>
+                </ul>
+            </li>
+            <li><a href="catalogoAdmin.html">CATALOGO ADMIN</a></li>
+            <li><a href="materiales.html">MATERIALES</a></li>
+            <li><a href="qa.html">FORO</a></li>
+            <li><a href="carrito.html">CARRITO</a></li>
+            <li><a href="indexadmin.html">INICIO</a></li>
         </ul>
     </nav>
 </header>
@@ -55,10 +68,9 @@
         
                                     <div id="entrarForm" class="formulario__login" method="post">
                                         <h2>FORMULARIO DE COMPRAS</h2>
-                                        <h2>id del zapato</h2>
-                                        <input name="IDZAPATO" id="IDZAPATO" type="IDZAPATO" placeholder="IDZAPATO">
-                                        <h2>talla</h2>
-                                        <input name="TALLA" id="TALLA" type="TALLA" placeholder="TALLA">
+
+                                        <h2>EJEMPLAR</h2>
+                                        <input name="IDEJEMPLAR" id="IDEJEMPLAR" type="IDEJEMPLAR" placeholder="IDEJEMPLAR">
                                         <br>
                                         <button onclick="comprar()">VALIDAR COMPRAR</button>
                                     </div>
@@ -75,7 +87,7 @@
                             <input class="clonCantidad" type="number" name="Cantidad" id="Cantidad" value="Cantidad"
                                 placeholder="Cantidad">
                             <input class="clonTalla" type="number" name="Talla" id="Talla" value="Talla"
-                                placeholder="Talla">
+                                placeholder="Talla" >
                             <br>
                         </div>
                     </div>
@@ -83,15 +95,10 @@
                     <div class="col-12 clonar" id="contenedor"></div>
                     <div class="col-12">
 
-                        <button class="button" style="background-color: green;" id="eliminar"
+                        <button class="button" style="background-color: green;" 
                             onclick="editar()">editar</button>
                     </div>
-                    <div class="col-12">
-                        <button class="button" style="background-color: green;" id="agregar">Agregar campo +</button>
-                    </div>
-                    <div class="col-12">
-                        <button class="button" style="background-color: green;" id="eliminar">Eliminar campo +</button>
-                    </div>
+                  
 
 
                 </div>
@@ -110,11 +117,27 @@
             <script src="assets/js/main.js"></script>
             <script src="assets/js/stock.js"></script>
             <script src="assets/js/stockeditar.js"></script>
+            <script src="assets/js/validarcompra.js"></script>
             <script>
                 let agregar = document.getElementById('agregar');
                 let eliminar = document.getElementById('eliminar');
                 let contenido = document.getElementById('contenedor');
-                let contador = 1;
+                let contador = 2;
+                document.getElementsByName("Talla")[0].value=37;
+                for (let index = 0; contador < 8; contador++) {
+                        let clonado = document.querySelector('.clonar');
+                    let clon = clonado.cloneNode(true);
+                    let clonSelect = clon.querySelector('.clonTalla');
+
+                    clonSelect.setAttribute("name", "Talla" + contador)
+                    clonSelect.value=36+contador;
+                    let clonCantidad = clon.querySelector('.clonCantidad');
+                    clonCantidad.setAttribute("name", "Cantidad" + contador)
+
+                    clon.setAttribute("name", "div" + contador)
+                    contenido.appendChild(clon).classList.remove('clonar');
+
+                    }
                 agregar.addEventListener('click', e => {
                     e.preventDefault();
 
@@ -122,6 +145,7 @@
                     let clon = clonado.cloneNode(true);
 
 
+                   
                     contador++;
                     let clonSelect = clon.querySelector('.clonTalla');
                     clonSelect.setAttribute("name", "Talla" + contador)
