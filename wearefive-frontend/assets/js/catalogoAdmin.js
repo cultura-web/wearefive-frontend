@@ -69,9 +69,12 @@ fetch("http://"+host()+"/api/products/list")
     div_img.className = "ctn-img";
     const img=document.createElement('img')
     img.src=product.imagenUrl;
-  
+    div_img.appendChild(img)
+    content.appendChild(div_img)
+
     const h2=document.createElement('h2')
     h2.innerHTML=product.nombre;
+    content.appendChild(h2)
 
 //input contiene el input oculto que redirige por medio de luego por el button su valor al url proximo que sera el de detalle.html para generar los valores de la tabla
     const input=document.createElement('input')
@@ -79,17 +82,25 @@ fetch("http://"+host()+"/api/products/list")
     input.name="idModelo"
     input.value=product.id
 
+    content.appendChild(input)
+
 
     const span=document.createElement('span')
     span.innerHTML="$"+product.precioVenta;
     const ul_li=document.createElement('ul')
-    const li=document.createElement('li')
-    li.innerHTML=product.categoria;
-    
+    //categoria
+    // const li=document.createElement('li')
+    // li.innerHTML=product.categoria;
+    // ul_li.appendChild(li)
+    content.appendChild(span)
+
+    content.appendChild(ul_li)
     //boton que escuchara al form del comienzo en la variable content
     const button=document.createElement('button')
     button.innerHTML="Leer más"
- 
+
+    content.appendChild(button)
+
     const contentproceso=document.createElement('form')
 
     contentproceso.className="post";
@@ -101,7 +112,9 @@ fetch("http://"+host()+"/api/products/list")
     inputproceso.value=product.id
     const buttonproceso=document.createElement('button')
     buttonproceso.innerHTML="Gestionar proceso"
-
+    content.appendChild(contentproceso)
+    contentproceso.appendChild(inputproceso)
+    contentproceso.appendChild(buttonproceso)
         
     const contentS=document.createElement('form')
 
@@ -115,25 +128,15 @@ fetch("http://"+host()+"/api/products/list")
     const buttonS=document.createElement('button')
     buttonS.innerHTML="Gestionar stock"
 
-   
     contentS.appendChild(inputS)
     contentS.appendChild(buttonS)
-
+    content.appendChild(contentS)
     //se encierran los objetos unos dentro de otros dependiendo del orden
-    div_img.appendChild(img)
-    ul_li.appendChild(li)
 
     //se contienen luego de ser necesario dentro de la base creada o la que los mostrara en el html
-    content.appendChild(div_img)
-    content.appendChild(h2)
-    content.appendChild(input)
-    content.appendChild(span)
-    content.appendChild(ul_li)
-    content.appendChild(button)
-    content.appendChild(contentproceso)
-    contentproceso.appendChild(inputproceso)
-    contentproceso.appendChild(buttonproceso)
-    content.appendChild(contentS)
+
+
+
     //la base que aparece en html contiene todo para que aparesca en el html
     div_base.appendChild(content)
     }

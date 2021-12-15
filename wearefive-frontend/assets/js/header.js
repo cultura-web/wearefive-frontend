@@ -60,7 +60,6 @@ amaterial.href="materiales.html"
 limaterial.appendChild(amaterial)
 ul.appendChild(limaterial)
 */
-
 const tokenHeader= window.sessionStorage.getItem('access_token')
 const usuario=document.getElementById("usuario")
 const liname =document.createElement("li")
@@ -92,7 +91,7 @@ else{
 const libuscar=document.createElement("li")
 libuscar.style="color:white;"
 const formularioB=document.createElement("form")
-formularioB.action="buscarAdmin.html"
+formularioB.action="buscar.html"
 const buscarZapato=document.createElement("input")
 buscarZapato.type="input"
 buscarZapato.name="nombreUrl"
@@ -103,3 +102,4 @@ formularioB.appendChild(buscarZapato)
 formularioB.appendChild(buttonBuscar)
 libuscar.appendChild(formularioB)
 ul.appendChild(libuscar)
+
