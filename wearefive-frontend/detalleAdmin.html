@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>WE ARE FIVE</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/blog.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="indexAdmin.html">WE ARE FIVE</a> &nbsp BIENVENIDO ADMIN</h1>
+			<nav id="nav">
+				<ul id="ulnav">
+					<li>
+						<a href="#">OPCIONES</a>
+						<ul style="background-color: rgba(32, 54, 80, 1);">
+							<li style="color: white;"><a href="carrito.html">GESTIONAR ZAPATOS</a></li>
+							<li style="color: white;"><a href="materiales.html">GESTIONAR MATERIAL</a></li>
+							<li style="color: white;"><a href="procesos.html">GESTIONAR PROCESOS</a></li>
+							<li style="color: white;"><a href="Stock.html">INVENTARIO</a></li>
+						</ul>
+					</li>
+					<li><a href="catalogoAdmin.html">CATALOGO ADMIN</a></li>
+					<li><a href="qaListAdmin.html">FORO</a></li>
+					<li><a href="indexadmin.html">INICIO</a></li>
+				<li><a href="Login_registrer.html" class="button" id="usuario">Iniciar Sesión</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section id="main" class="container">
+			<section class="box special">
+				<div>
+					<link rel="stylesheet" href="assets/css/carrusel.css">
+					<!--image slider start-->
+					<div class="slider">
+						<div class="slides">
+							<!--radio buttons start-->.
+							<input type="radio" name="radio-btn" id="radio1">
+							<input type="radio" name="radio-btn" id="radio2">
+							<input type="radio" name="radio-btn" id="radio3">
+							<input type="radio" name="radio-btn" id="radio4">
+							<!--radio buttons end-->
+							<!--slide images start-->
+							<div class="slide first">
+								<img src="https://i.ibb.co/2v4fFhk/3-1-Augusta.png" alt="">
+							</div>
+							<div class="slide">
+								<img src="https://i.ibb.co/gt5dQyh/2-2-nascar.jpg" alt="">
+							</div>
+							<div class="slide">
+								<img src="https://i.ibb.co/KNpDzBQ/4-1-thegrey.png"alt="">
+							</div>
+							<div class="slide">
+								<img src="https://i.ibb.co/3phtVMB/5-1-lucky.png" alt="">
+							</div>
+							<!--slide images end-->
+							<!--automatic navigation start-->
+							<div>
+
+							</div>
+							<!--automatic navigation end-->
+						</div>
+						<!--manual navigation start-->
+						<br><br>
+						<div class="navigation-manual">
+							<label for="radio1" class="manual-btn"
+								style="background-color: green; color: white;">VERDE</label>
+							<label for="radio2" class="manual-btn"
+								style="background-color: white; color: black;">BLANCO</label>
+							<label for="radio3" class="manual-btn"
+								style="background-color: black; color: white;">NEGRO</label>
+							<label for="radio4" class="manual-btn"
+								style="background-color: yellow; color: black;">AMARILLO</label>
+						</div>
+						<!--manual navigation end-->
+					</div>
+				</div>
+			</section>
+
+			<section class="box special">
+				<img src="" alt="" id="imgjs" height="600"width="auto">
+				<div class="col-12">
+					<select name="color" id="color">
+						<option id="colorjs" value="">- COLOR -</option>
+						<option value="1">color1</option>
+						<option value="2">color2</option>
+						<option value="3">color3</option>
+						<option value="4">color4</option>
+					</select>
+				</div>
+				<header class="major">
+					<h2 id="nombrejs">TITULO</h2>
+					<p>Blandit varius ut praesent nascetur eu penatibus nisi rsus faucibus nunc ornare<br />
+						adipiscing nunc adipiscing. Condimentum turpis massa.</p><br><br>
+					<table style="color: black;">
+						<tr>
+							<td>MATERIALES</td>
+							<td>
+								<ul style="text-align: left;" id="materialjs">
+
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>DETALLES</td>
+							<td id="descripcionjs">-</td>
+						</tr>
+						<tr>
+							<td>TIPO</td>
+							<td id="tipojs">-</td>
+						</tr>
+						<tr>
+							<td>COSTO</td>
+							<td id="precioVentajs">-</td>
+						</tr>
+						<tr>
+							<td>DESCUENTO</td>
+							<td id="descuentojs">%-</td>
+						</tr>
+					</table>
+					<!-- SE TIENE QUE HACER UN JS QUE HAGA LOS LLAMADOS DE LOS DETALLES EN LOS INPUTS DEL FORMULARIO
+					DE EDITAR DETALLE-->
+					<a href="editar-zapato.html"> editar zapato</a>
+					<input type="submit" value="Editar detalles">
+					&nbsp;
+					<input style="background-color: red;" type="submit" value="Borrar zapato">
+					<!---->
+					<section id="main" class="container medium">
+						<section id="one">
+							<section id="main" class="container medium">
+								<div class="box">
+									<h2>Contactanos</h2>
+									<p>Tell us what you think about our little operation.</p>
+									<form method="post" action="#">
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-6 col-12-mobilep">
+												<input type="text" name="name" id="name" value="" placeholder="Name" />
+											</div>
+											<div class="col-6 col-12-mobilep">
+												<input type="email" name="email" id="email" value=""
+													placeholder="Email" />
+											</div>
+											<div class="col-12">
+												<input type="text" name="subject" id="subject" value=""
+													placeholder="Subject" />
+											</div>
+											<div class="col-12">
+												<textarea name="message" id="message" placeholder="Enter your message"
+													rows="6"></textarea>
+											</div>
+											<div class="col-12">
+												<ul class="actions special">
+													<input type="submit" value="Send Message">
+													&nbsp; &nbsp;
+													<a href="catalogo.html" class="button">Regresar</a>
+												</ul>
+											</div>
+										</div>
+									</form>
+								</div>
+							</section>
+						</section>
+				</header>
+			</section>
+		</section>
+		<!-- Footer -->
+		<footer id="footer">
+			<ul class="icons">
+				<li><a href="https://www.facebook.com/"><img src="images/facebook.png"></a></li>
+				<li><a href="https://api.whatsapp.com/send?phone=0123456789"><img src="images/whatsapp.png"></a>
+				</li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; TODOS LOS DERECHOS RESERVADOS</li>
+				<li>Diseñado por <a href="#">CULTURA WEB</a></li>
+			</ul>
+		</footer>
+	</div>
+
+
+	<!-- Scripts -->
+	<script src="assets/js/host.js"></script>
+	<script src="assets/js/parseToken.js"></script>
+	<script src="assets/js/headerAdmin.js"></script>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/detalleAdmin.js"></script>
+	<script src="assets/js/validar.js"></script>
+</body>
+</html>
