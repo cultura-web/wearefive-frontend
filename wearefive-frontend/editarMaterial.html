@@ -35,7 +35,7 @@
                 </nav>
             </header>
             <div class="boxRegistrarZapato">
-                <form method="post" id="registrarZapato">
+                <div method="post" id="registrarZapato">
                     <div class="row gtr-50 gtr-uniform">
                         <label>
                             <span>Nombre del proceso</span>
@@ -53,9 +53,11 @@
                             <span>Unidad</span>
                             <input name="unidad" type="text" id="unidad">
                         </label>
-                        <button onclick="editarMaterial()">Guardar cambios</button>
+                        
+
                     </div>
-                </form>
+                    <input type="submit" onclick="editarMaterial()" value="Guardar cambios">
+                </div>
             </div>
             <script src="assets/js/headerAdmin.js"></script>
             <script src="assets/js/host.js"></script>

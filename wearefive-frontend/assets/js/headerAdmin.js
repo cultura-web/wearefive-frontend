@@ -6,6 +6,7 @@ const aopciones=document.createElement("a")
 aopciones.href="#"
 aopciones.innerText="OPCIONES"
 const ulopciones=document.createElement("ul")
+
 ulopciones.style="background-color: rgba(32, 54, 80, 1);"
 liopciones.appendChild(aopciones)
 liopciones.appendChild(ulopciones)
@@ -89,6 +90,7 @@ else{
     
 
 }
+
 const libuscar=document.createElement("li")
 libuscar.style="color:white;"
 const formularioB=document.createElement("form")
@@ -96,11 +98,14 @@ formularioB.action="buscarAdmin.html"
 const buscarZapato=document.createElement("input")
 buscarZapato.type="input"
 buscarZapato.name="nombreUrl"
-const buttonBuscar=document.createElement("button")
+const buttonBuscar=document.createElement("input")
+buttonBuscar.type="submit"
+buttonBuscar.value="BUSCAR"
 buttonBuscar.innerHTML="BUSCAR"
 
 formularioB.appendChild(buscarZapato)
 formularioB.appendChild(buttonBuscar)
 libuscar.appendChild(formularioB)
 ul.appendChild(libuscar)
+
 
