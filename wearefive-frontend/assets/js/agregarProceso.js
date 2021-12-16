@@ -31,14 +31,7 @@ async  function agregarProceso(){
   }
   console.log(materiales)
   const token= window.sessionStorage.getItem('access_token');
- const body= JSON.stringify({    
-    nombre:"correr",
-    detalle:"a gran velocidad",
-materiales:
-      materiales
-    
-})
-console.log(body)
+
   try{
       const rawResponse = await fetch("http://localhost:8080/api/products/model/"+id+"/process", {
         method: 'POST',
@@ -65,7 +58,7 @@ console.log(body)
       
      } catch(error) {
           alert(error)
-          window.location.href = 'agregarProceso.html';
+          window.location.href = 'procesos.html';
           console.log(error)
      }
     };
