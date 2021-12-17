@@ -70,8 +70,9 @@ fetch("http://"+host()+"/api/products/model/"+nombreurl)
     const li=document.createElement('li')
     li.innerHTML=product.categoria;
     content.appendChild(span)
-    ul_li.appendChild(li)
-    content.appendChild(ul_li)
+    //salida de categoria
+    // ul_li.appendChild(li)
+    // content.appendChild(ul_li)
     //boton que escuchara al form del comienzo en la variable content
     const button=document.createElement('button')
     button.innerHTML="Leer más"
