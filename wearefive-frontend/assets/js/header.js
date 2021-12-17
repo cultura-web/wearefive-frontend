@@ -95,7 +95,9 @@ formularioB.action="buscar.html"
 const buscarZapato=document.createElement("input")
 buscarZapato.type="input"
 buscarZapato.name="nombreUrl"
-const buttonBuscar=document.createElement("button")
+const buttonBuscar=document.createElement("input")
+buttonBuscar.type="submit"
+buttonBuscar.value="BUSCAR"
 buttonBuscar.innerHTML="BUSCAR"
 
 formularioB.appendChild(buscarZapato)
